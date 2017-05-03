@@ -1,433 +1,546 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 
 <data>
     <indicator name="Urban population (%of total)" code="SP.URB.TOTL.IN.ZS">
         <world name="World" code="WLD">
-            <year_1960>-269214.3</year_1960>
-            <year_1961>3886788.2</year_1961>
-            <year_1962>7872712.6</year_1962>
-            <year_1963>1972400.2</year_1963>
-            <year_1964>1200852.1</year_1964>
-            <year_1965>9720110.8</year_1965>
-            <year_1966>3239429.5</year_1966>
-            <year_1967>87805.9</year_1967>
-            <year_1968>2604795.9</year_1968>
-            <year_1969>4169004.6</year_1969>
-            <year_1970>1809566.6</year_1970>
-            <year_1971>8242471.3</year_1971>
-            <year_1972>7655499.2</year_1972>
-            <year_1973>7576990.6</year_1973>
-            <year_1974>8258624.9</year_1974>
-            <year_1975>1683745.7</year_1975>
-            <year_1976>7151572.6</year_1976>
-            <year_1977>265682.2</year_1977>
-            <year_1978>2761787.4</year_1978>
-            <year_1979>-743179.6</year_1979>
-            <year_1980>6481364.3</year_1980>
-            <year_1981>8580049.6</year_1981>
-            <year_1982>3848547.8</year_1982>
-            <year_1983>6217550.0</year_1983>
-            <year_1984>3090236.9</year_1984>
-            <year_1985>7240097.9</year_1985>
-            <year_1986>7003957.4</year_1986>
-            <year_1987>4739909.4</year_1987>
-            <year_1988>125500.6</year_1988>
-            <year_1989>9129344.5</year_1989>
-            <year_1990>9311039.0</year_1990>
-            <year_1991>460943.2</year_1991>
-            <year_1992>4159725.4</year_1992>
-            <year_1993>4887875.4</year_1993>
-            <year_1994>3113813.8</year_1994>
-            <year_1995>630082.9</year_1995>
-            <year_1996>7820974.7</year_1996>
-            <year_1997>2269406.9</year_1997>
-            <year_1998>5780723.6</year_1998>
-            <year_1999>-667197.4</year_1999>
-            <year_2000>525650.6</year_2000>
-            <year_2001>8006969.4</year_2001>
-            <year_2002>3205841.3</year_2002>
-            <year_2003>9462299.1</year_2003>
-            <year_2004>5303993.0</year_2004>
-            <year_2005>3079677.0</year_2005>
-            <year_2006>8942481.5</year_2006>
-            <year_2007>1329162.0</year_2007>
-            <year_2008>7581696.4</year_2008>
-            <year_2009>2266198.7</year_2009>
-            <year_2010>3521600.6</year_2010>
-            <year_2011>6289194.2</year_2011>
-            <year_2012>1487959.2</year_2012>
-            <year_2013>8109383.1</year_2013>
-            <year_2014>60010.0</year_2014>
-            <year_2015>3367077.3</year_2015>
-            <year_2016>8081651.4</year_2016>
+            <value year="1960">364962.0</value>
+            <value year="1961"></value>
+            <value year="1962"></value>
+            <value year="1963">984270.3</value>
+            <value year="1964">-712096.1</value>
+            <value year="1965">595113.3</value>
+            <value year="1966">-240878.0</value>
+            <value year="1967">860508.7</value>
+            <value year="1968">693168.9</value>
+            <value year="1969">-686669.5</value>
+            <value year="1970">-42565.8</value>
+            <value year="1971">-435682.6</value>
+            <value year="1972"></value>
+            <value year="1973">-235391.5</value>
+            <value year="1974">-770217.3</value>
+            <value year="1975">-940690.0</value>
+            <value year="1976">-553707.9</value>
+            <value year="1977">-593186.1</value>
+            <value year="1978">-565627.6</value>
+            <value year="1979">451203.8</value>
+            <value year="1980">383874.4</value>
+            <value year="1981">-589882.6</value>
+            <value year="1982">-277520.8</value>
+            <value year="1983">-943454.1</value>
+            <value year="1984">821585.7</value>
+            <value year="1985">-334969.4</value>
+            <value year="1986">414596.8</value>
+            <value year="1987">900235.1</value>
+            <value year="1988">888606.6</value>
+            <value year="1989">713355.9</value>
+            <value year="1990">438859.9</value>
+            <value year="1991">547103.8</value>
+            <value year="1992">903842.2</value>
+            <value year="1993">774295.2</value>
+            <value year="1994">925745.9</value>
+            <value year="1995">-962311.1</value>
+            <value year="1996">802635.8</value>
+            <value year="1997">-749901.2</value>
+            <value year="1998">-771358.6</value>
+            <value year="1999">-67098.0</value>
+            <value year="2000">-460114.1</value>
+            <value year="2001">714436.5</value>
+            <value year="2002">415335.0</value>
+            <value year="2003">-981446.9</value>
+            <value year="2004">766969.8</value>
+            <value year="2005">-211504.7</value>
+            <value year="2006">39510.5</value>
+            <value year="2007">697.0</value>
+            <value year="2008">677509.5</value>
+            <value year="2009">-304761.2</value>
+            <value year="2010">-136662.6</value>
+            <value year="2011">812438.6</value>
+            <value year="2012">-749630.5</value>
+            <value year="2013">-153353.3</value>
+            <value year="2014">545322.9</value>
+            <value year="2015">912744.5</value>
+            <value year="2016">226401.8</value>
         </world>
         <regions>
             <region name="Sub-Saharan Africa" code="SSF">
-                <year_1960>-269214.3</year_1960>
-                <year_1961>3886788.2</year_1961>
-                <year_1962>7872712.6</year_1962>
-                <year_1963>1972400.2</year_1963>
-                <year_1964>1200852.1</year_1964>
-                <year_1965>9720110.8</year_1965>
-                <year_1966>3239429.5</year_1966>
-                <year_1967></year_1967>
-                <year_1968>2604795.9</year_1968>
-                <year_1969>56464512123014169004.6565561000000001</year_1969>
-                <year_1970>1809566.6</year_1970>
-                <year_1971>8242471.3</year_1971>
-                <year_1972>7655499.2</year_1972>
-                <year_1973>7576990.6</year_1973>
-                <year_1974>8258624.9</year_1974>
-                <year_1975>1683745.7</year_1975>
-                <year_1976>7151572.6</year_1976>
-                <year_1977>265682.2</year_1977>
-                <year_1978>2761787.4</year_1978>
-                <year_1979>-743179.6</year_1979>
-                <year_1980>6481364.3</year_1980>
-                <year_1981>8580049.6</year_1981>
-                <year_1982>3848547.8</year_1982>
-                <year_1983>6217550.0</year_1983>
-                <year_1984>3090236.9</year_1984>
-                <year_1985>7240097.9</year_1985>
-                <year_1986>7003957.4</year_1986>
-                <year_1987>4739909.4</year_1987>
-                <year_1988>125500.6</year_1988>
-                <year_1989>9129344.5</year_1989>
-                <year_1990>9311039.0</year_1990>
-                <year_1991>460943.2</year_1991>
-                <year_1992>4159725.4</year_1992>
-                <year_1993>4887875.4</year_1993>
-                <year_1994>3113813.8</year_1994>
-                <year_1995>630082.9</year_1995>
-                <year_1996>7820974.7</year_1996>
-                <year_1997></year_1997>
-                <year_1998></year_1998>
-                <year_1999>-667197.4</year_1999>
-                <year_2000>525650.6</year_2000>
-                <year_2001>8006969.4</year_2001>
-                <year_2002>3205841.3</year_2002>
-                <year_2003>9462299.1</year_2003>
-                <year_2004>5303993.0</year_2004>
-                <year_2005>3079677.0</year_2005>
-                <year_2006>8942481.5</year_2006>
-                <year_2007>1329162.0</year_2007>
-                <year_2008>7581696.4</year_2008>
-                <year_2009>2266198.7</year_2009>
-                <year_2010></year_2010>
-                <year_2011>45</year_2011>
-                <year_2012>0</year_2012>
-                <year_2013>8109383.1</year_2013>
-                <year_2014>60010.0</year_2014>
-                <year_2015>3367077.3</year_2015>
-                <year_2016>8081651.4</year_2016>
+                <value year="1960">364962.0</value>
+                <value year="1961"></value>
+                <value year="1962"></value>
+                <value year="1963">984270.3</value>
+                <value year="1964">-712096.1</value>
+                <value year="1965">595113.3</value>
+                <value year="1966">-240878.0</value>
+                <value year="1967">860508.7</value>
+                <value year="1968">693168.9</value>
+                <value year="1969">-686669.5</value>
+                <value year="1970">-42565.8</value>
+                <value year="1971">-435682.6</value>
+                <value year="1972"></value>
+                <value year="1973">-235391.5</value>
+                <value year="1974">-770217.3</value>
+                <value year="1975">-940690.0</value>
+                <value year="1976">-553707.9</value>
+                <value year="1977">-593186.1</value>
+                <value year="1978">-565627.6</value>
+                <value year="1979">451203.8</value>
+                <value year="1980">383874.4</value>
+                <value year="1981">-589882.6</value>
+                <value year="1982">-277520.8</value>
+                <value year="1983">-943454.1</value>
+                <value year="1984">821585.7</value>
+                <value year="1985">-334969.4</value>
+                <value year="1986">414596.8</value>
+                <value year="1987">900235.1</value>
+                <value year="1988">888606.6</value>
+                <value year="1989">713355.9</value>
+                <value year="1990">438859.9</value>
+                <value year="1991">547103.8</value>
+                <value year="1992">903842.2</value>
+                <value year="1993">774295.2</value>
+                <value year="1994">925745.9</value>
+                <value year="1995">-962311.1</value>
+                <value year="1996">802635.8</value>
+                <value year="1997">-749901.2</value>
+                <value year="1998">-771358.6</value>
+                <value year="1999">-67098.0</value>
+                <value year="2000">-460114.1</value>
+                <value year="2001">714436.5</value>
+                <value year="2002">415335.0</value>
+                <value year="2003">-981446.9</value>
+                <value year="2004">766969.8</value>
+                <value year="2005">-211504.7</value>
+                <value year="2006">39510.5</value>
+                <value year="2007">697.0</value>
+                <value year="2008">677509.5</value>
+                <value year="2009">-304761.2</value>
+                <value year="2010">-136662.6</value>
+                <value year="2011">812438.6</value>
+                <value year="2012">-749630.5</value>
+                <value year="2013">-153353.3</value>
+                <value year="2014">545322.9</value>
+                <value year="2015">912744.5</value>
+                <value year="2016">226401.8</value>
+            </region>
+            <region name="North America" code="NAC">
+                <value year="1960">364962.0</value>
+                <value year="1961"></value>
+                <value year="1962"></value>
+                <value year="1963">984270.3</value>
+                <value year="1964">-712096.1</value>
+                <value year="1965">595113.3</value>
+                <value year="1966">-240878.0</value>
+                <value year="1967">860508.7</value>
+                <value year="1968">693168.9</value>
+                <value year="1969">-686669.5</value>
+                <value year="1970">-42565.8</value>
+                <value year="1971">-435682.6</value>
+                <value year="1972"></value>
+                <value year="1973">-235391.5</value>
+                <value year="1974">-770217.3</value>
+                <value year="1975">-940690.0</value>
+                <value year="1976">-553707.9</value>
+                <value year="1977">-593186.1</value>
+                <value year="1978">-565627.6</value>
+                <value year="1979">451203.8</value>
+                <value year="1980">383874.4</value>
+                <value year="1981">-589882.6</value>
+                <value year="1982">-277520.8</value>
+                <value year="1983">-943454.1</value>
+                <value year="1984">821585.7</value>
+                <value year="1985">-334969.4</value>
+                <value year="1986">414596.8</value>
+                <value year="1987">900235.1</value>
+                <value year="1988">888606.6</value>
+                <value year="1989">713355.9</value>
+                <value year="1990">438859.9</value>
+                <value year="1991">547103.8</value>
+                <value year="1992">903842.2</value>
+                <value year="1993">774295.2</value>
+                <value year="1994">925745.9</value>
+                <value year="1995">-962311.1</value>
+                <value year="1996">802635.8</value>
+                <value year="1997">-749901.2</value>
+                <value year="1998">-771358.6</value>
+                <value year="1999">-67098.0</value>
+                <value year="2000">-460114.1</value>
+                <value year="2001">714436.5</value>
+                <value year="2002">415335.0</value>
+                <value year="2003">-981446.9</value>
+                <value year="2004">766969.8</value>
+                <value year="2005">-211504.7</value>
+                <value year="2006">39510.5</value>
+                <value year="2007">697.0</value>
+                <value year="2008">677509.5</value>
+                <value year="2009">-304761.2</value>
+                <value year="2010">-136662.6</value>
+                <value year="2011">812438.6</value>
+                <value year="2012">-749630.5</value>
+                <value year="2013">-153353.3</value>
+                <value year="2014">545322.9</value>
+                <value year="2015">912744.5</value>
+                <value year="2016">226401.8</value>
             </region>
         </regions>
         <countries>
             <country name="Slovakia" code="SVK">
-                <year_1960>-269214.3</year_1960>
-                <year_1961>3886788.2</year_1961>
-                <year_1962>7872712.6</year_1962>
-                <year_1963>1972400.2</year_1963>
-                <year_1964>1200852.1</year_1964>
-                <year_1965>9720110.8</year_1965>
-                <year_1966>3239429.5</year_1966>
-                <year_1967>87805.9</year_1967>
-                <year_1968>2604795.9</year_1968>
-                <year_1969>4169004.6</year_1969>
-                <year_1970>1809566.6</year_1970>
-                <year_1971>8242471.3</year_1971>
-                <year_1972>7655499.2</year_1972>
-                <year_1973>7576990.6</year_1973>
-                <year_1974>8258624.9</year_1974>
-                <year_1975>1683745.7</year_1975>
-                <year_1976>7151572.6</year_1976>
-                <year_1977>265682.2</year_1977>
-                <year_1978>2761787.4</year_1978>
-                <year_1979>-743179.6</year_1979>
-                <year_1980>6481364.3</year_1980>
-                <year_1981>8580049.6</year_1981>
-                <year_1982>3848547.8</year_1982>
-                <year_1983>6217550.0</year_1983>
-                <year_1984>3090236.9</year_1984>
-                <year_1985>7240097.9</year_1985>
-                <year_1986>7003957.4</year_1986>
-                <year_1987>4739909.4</year_1987>
-                <year_1988>125500.6</year_1988>
-                <year_1989>9129344.5</year_1989>
-                <year_1990>9311039.0</year_1990>
-                <year_1991>460943.2</year_1991>
-                <year_1992>4159725.4</year_1992>
-                <year_1993>4887875.4</year_1993>
-                <year_1994>3113813.8</year_1994>
-                <year_1995>630082.9</year_1995>
-                <year_1996>7820974.7</year_1996>
-                <year_1997>454655665.8</year_1997>
-                <year_1998>4456445.1</year_1998>
-                <year_1999>-667197.4</year_1999>
-                <year_2000>48456454.4</year_2000>
-                <year_2001>8006969.4</year_2001>
-                <year_2002>3205841.3</year_2002>
-                <year_2003>9462299.1</year_2003>
-                <year_2004>5303993.0</year_2004>
-                <year_2005>3079677.0</year_2005>
-                <year_2006>8942481.5</year_2006>
-                <year_2007>1329162.0</year_2007>
-                <year_2008>7581696.4</year_2008>
-                <year_2009>2266198.7</year_2009>
-                <year_2010>4912123.8</year_2010>
-                <year_2011>458498.6</year_2011>
-                <year_2012>1487959.2</year_2012>
-                <year_2013>8109383.1</year_2013>
-                <year_2014>60010.0</year_2014>
-                <year_2015>3367077.3</year_2015>
-                <year_2016>8081651.4</year_2016>
+                <value year="1960">364962.0</value>
+                <value year="1961"></value>
+                <value year="1962"></value>
+                <value year="1963">984270.3</value>
+                <value year="1964">-712096.1</value>
+                <value year="1965">595113.3</value>
+                <value year="1966">-240878.0</value>
+                <value year="1967">860508.7</value>
+                <value year="1968">693168.9</value>
+                <value year="1969">-686669.5</value>
+                <value year="1970">-42565.8</value>
+                <value year="1971">-435682.6</value>
+                <value year="1972"></value>
+                <value year="1973">-235391.5</value>
+                <value year="1974">-770217.3</value>
+                <value year="1975">-940690.0</value>
+                <value year="1976">-553707.9</value>
+                <value year="1977">-593186.1</value>
+                <value year="1978">-565627.6</value>
+                <value year="1979">451203.8</value>
+                <value year="1980">383874.4</value>
+                <value year="1981">-589882.6</value>
+                <value year="1982">-277520.8</value>
+                <value year="1983">-943454.1</value>
+                <value year="1984">821585.7</value>
+                <value year="1985">-334969.4</value>
+                <value year="1986">414596.8</value>
+                <value year="1987">900235.1</value>
+                <value year="1988">888606.6</value>
+                <value year="1989">713355.9</value>
+                <value year="1990">438859.9</value>
+                <value year="1991">547103.8</value>
+                <value year="1992">903842.2</value>
+                <value year="1993">774295.2</value>
+                <value year="1994">925745.9</value>
+                <value year="1995">-962311.1</value>
+                <value year="1996">802635.8</value>
+                <value year="1997">-749901.2</value>
+                <value year="1998">-771358.6</value>
+                <value year="1999">-67098.0</value>
+                <value year="2000">-460114.1</value>
+                <value year="2001">714436.5</value>
+                <value year="2002">415335.0</value>
+                <value year="2003">-981446.9</value>
+                <value year="2004">766969.8</value>
+                <value year="2005">-211504.7</value>
+                <value year="2006">39510.5</value>
+                <value year="2007">697.0</value>
+                <value year="2008">677509.5</value>
+                <value year="2009">-304761.2</value>
+                <value year="2010">-136662.6</value>
+                <value year="2011">812438.6</value>
+                <value year="2012">-749630.5</value>
+                <value year="2013">-153353.3</value>
+                <value year="2014">545322.9</value>
+                <value year="2015">912744.5</value>
+                <value year="2016">226401.8</value>
+            </country>
+            <country name="Czech Republic" code="CZE">
+                <value year="1960">364962.0</value>
+                <value year="1961"></value>
+                <value year="1962"></value>
+                <value year="1963">984270.3</value>
+                <value year="1964">-712096.1</value>
+                <value year="1965">595113.3</value>
+                <value year="1966">-240878.0</value>
+                <value year="1967">860508.7</value>
+                <value year="1968">693168.9</value>
+                <value year="1969">-686669.5</value>
+                <value year="1970">-42565.8</value>
+                <value year="1971">-435682.6</value>
+                <value year="1972"></value>
+                <value year="1973">-235391.5</value>
+                <value year="1974">-770217.3</value>
+                <value year="1975">-940690.0</value>
+                <value year="1976">-553707.9</value>
+                <value year="1977">-593186.1</value>
+                <value year="1978">-565627.6</value>
+                <value year="1979">451203.8</value>
+                <value year="1980">383874.4</value>
+                <value year="1981">-589882.6</value>
+                <value year="1982">-277520.8</value>
+                <value year="1983">-943454.1</value>
+                <value year="1984">821585.7</value>
+                <value year="1985">-334969.4</value>
+                <value year="1986">414596.8</value>
+                <value year="1987">900235.1</value>
+                <value year="1988">888606.6</value>
+                <value year="1989">713355.9</value>
+                <value year="1990">438859.9</value>
+                <value year="1991">547103.8</value>
+                <value year="1992">903842.2</value>
+                <value year="1993">774295.2</value>
+                <value year="1994">925745.9</value>
+                <value year="1995">-962311.1</value>
+                <value year="1996">802635.8</value>
+                <value year="1997">-749901.2</value>
+                <value year="1998">-771358.6</value>
+                <value year="1999">-67098.0</value>
+                <value year="2000">-460114.1</value>
+                <value year="2001">714436.5</value>
+                <value year="2002">415335.0</value>
+                <value year="2003">-981446.9</value>
+                <value year="2004">766969.8</value>
+                <value year="2005">-211504.7</value>
+                <value year="2006">39510.5</value>
+                <value year="2007">697.0</value>
+                <value year="2008">677509.5</value>
+                <value year="2009">-304761.2</value>
+                <value year="2010">-136662.6</value>
+                <value year="2011">812438.6</value>
+                <value year="2012">-749630.5</value>
+                <value year="2013">-153353.3</value>
+                <value year="2014">545322.9</value>
+                <value year="2015">912744.5</value>
+                <value year="2016">226401.8</value>
             </country>
         </countries>
     </indicator>
     <indicator name="Official exchange rate (LCU per US$ period average)" code="PA.NUS.FCRF">
-        <world name="World" code="WLD">
-            <year_1960>-269214.3</year_1960>
-            <year_1961>3886788.2</year_1961>
-            <year_1962>7872712.6</year_1962>
-            <year_1963>1972400.2</year_1963>
-            <year_1964>1200852.1</year_1964>
-            <year_1965>9720110.8</year_1965>
-            <year_1966>3239429.5</year_1966>
-            <year_1967>87805.9</year_1967>
-            <year_1968>2604795.9</year_1968>
-            <year_1969>4169004.6</year_1969>
-            <year_1970>1809566.6</year_1970>
-            <year_1971>8242471.3</year_1971>
-            <year_1972>7655499.2</year_1972>
-            <year_1973>7576990.6</year_1973>
-            <year_1974>8258624.9</year_1974>
-            <year_1975>1683745.7</year_1975>
-            <year_1976>7151572.6</year_1976>
-            <year_1977>265682.2</year_1977>
-            <year_1978>2761787.4</year_1978>
-            <year_1979>-743179.6</year_1979>
-            <year_1980>6481364.3</year_1980>
-            <year_1981>8580049.6</year_1981>
-            <year_1982>3848547.8</year_1982>
-            <year_1983>6217550.0</year_1983>
-            <year_1984>3090236.9</year_1984>
-            <year_1985>7240097.9</year_1985>
-            <year_1986>7003957.4</year_1986>
-            <year_1987>4739909.4</year_1987>
-            <year_1988>125500.6</year_1988>
-            <year_1989>9129344.5</year_1989>
-            <year_1990>9311039.0</year_1990>
-            <year_1991>460943.2</year_1991>
-            <year_1992>4159725.4</year_1992>
-            <year_1993>4887875.4</year_1993>
-            <year_1994>3113813.8</year_1994>
-            <year_1995>630082.9</year_1995>
-            <year_1996>7820974.7</year_1996>
-            <year_1997>2269406.9</year_1997>
-            <year_1998>5780723.6</year_1998>
-            <year_1999>-667197.4</year_1999>
-            <year_2000>525650.6</year_2000>
-            <year_2001>8006969.4</year_2001>
-            <year_2002>3205841.3</year_2002>
-            <year_2003>9462299.1</year_2003>
-            <year_2004>5303993.0</year_2004>
-            <year_2005>3079677.0</year_2005>
-            <year_2006>8942481.5</year_2006>
-            <year_2007>1329162.0</year_2007>
-            <year_2008>7581696.4</year_2008>
-            <year_2009>2266198.7</year_2009>
-            <year_2010>3521600.6</year_2010>
-            <year_2011>6289194.2</year_2011>
-            <year_2012>1487959.2</year_2012>
-            <year_2013>8109383.1</year_2013>
-            <year_2014>60010.0</year_2014>
-            <year_2015>3367077.3</year_2015>
-            <year_2016>8081651.4</year_2016>
+        <world name="World" code="WRL">
+            <value year="1960">364962.0</value>
+            <value year="1961"></value>
+            <value year="1962"></value>
+            <value year="1963">984270.3</value>
+            <value year="1964">-712096.1</value>
+            <value year="1965">595113.3</value>
+            <value year="1966">-240878.0</value>
+            <value year="1967">860508.7</value>
+            <value year="1968">693168.9</value>
+            <value year="1969">-686669.5</value>
+            <value year="1970">-42565.8</value>
+            <value year="1971">-435682.6</value>
+            <value year="1972"></value>
+            <value year="1973">-235391.5</value>
+            <value year="1974">-770217.3</value>
+            <value year="1975">-940690.0</value>
+            <value year="1976">-553707.9</value>
+            <value year="1977">-593186.1</value>
+            <value year="1978">-565627.6</value>
+            <value year="1979">451203.8</value>
+            <value year="1980">383874.4</value>
+            <value year="1981">-589882.6</value>
+            <value year="1982">-277520.8</value>
+            <value year="1983">-943454.1</value>
+            <value year="1984">821585.7</value>
+            <value year="1985">-334969.4</value>
+            <value year="1986">414596.8</value>
+            <value year="1987">900235.1</value>
+            <value year="1988">888606.6</value>
+            <value year="1989">713355.9</value>
+            <value year="1990">438859.9</value>
+            <value year="1991">547103.8</value>
+            <value year="1992">903842.2</value>
+            <value year="1993">774295.2</value>
+            <value year="1994">925745.9</value>
+            <value year="1995">-962311.1</value>
+            <value year="1996">802635.8</value>
+            <value year="1997">-749901.2</value>
+            <value year="1998">-771358.6</value>
+            <value year="1999">-67098.0</value>
+            <value year="2000">-460114.1</value>
+            <value year="2001">714436.5</value>
+            <value year="2002">415335.0</value>
+            <value year="2003">-981446.9</value>
+            <value year="2004">766969.8</value>
+            <value year="2005">-211504.7</value>
+            <value year="2006">39510.5</value>
+            <value year="2007">697.0</value>
+            <value year="2008">677509.5</value>
+            <value year="2009">-304761.2</value>
+            <value year="2010">-136662.6</value>
+            <value year="2011">812438.6</value>
+            <value year="2012">-749630.5</value>
+            <value year="2013">-153353.3</value>
+            <value year="2014">545322.9</value>
+            <value year="2015">912744.5</value>
+            <value year="2016">226401.8</value>
         </world>
         <regions>
             <region name="North America" code="NAC">
-                <year_1960>-269214.3</year_1960>
-                <year_1961>3886788.2</year_1961>
-                <year_1962>7872712.6</year_1962>
-                <year_1963>1972400.2</year_1963>
-                <year_1964>1200852.1</year_1964>
-                <year_1965>9720110.8</year_1965>
-                <year_1966>3239429.5</year_1966>
-                <year_1967>87805.9</year_1967>
-                <year_1968>2604795.9</year_1968>
-                <year_1969>4169004.6</year_1969>
-                <year_1970>1809566.6</year_1970>
-                <year_1971>8242471.3</year_1971>
-                <year_1972>7655499.2</year_1972>
-                <year_1973>7576990.6</year_1973>
-                <year_1974>8258624.9</year_1974>
-                <year_1975>1683745.7</year_1975>
-                <year_1976>7151572.6</year_1976>
-                <year_1977>265682.2</year_1977>
-                <year_1978>2761787.4</year_1978>
-                <year_1979>-743179.6</year_1979>
-                <year_1980>6481364.3</year_1980>
-                <year_1981>8580049.6</year_1981>
-                <year_1982>3848547.8</year_1982>
-                <year_1983>6217550.0</year_1983>
-                <year_1984>3090236.9</year_1984>
-                <year_1985>7240097.9</year_1985>
-                <year_1986>7003957.4</year_1986>
-                <year_1987>4739909.4</year_1987>
-                <year_1988>125500.6</year_1988>
-                <year_1989>9129344.5</year_1989>
-                <year_1990>9311039.0</year_1990>
-                <year_1991>460943.2</year_1991>
-                <year_1992>4159725.4</year_1992>
-                <year_1993>4887875.4</year_1993>
-                <year_1994>3113813.8</year_1994>
-                <year_1995>630082.9</year_1995>
-                <year_1996>7820974.7</year_1996>
-                <year_1997>2269406.9</year_1997>
-                <year_1998>5780723.6</year_1998>
-                <year_1999>-667197.4</year_1999>
-                <year_2000>525650.6</year_2000>
-                <year_2001>8006969.4</year_2001>
-                <year_2002>3205841.3</year_2002>
-                <year_2003>9462299.1</year_2003>
-                <year_2004>5303993.0</year_2004>
-                <year_2005>3079677.0</year_2005>
-                <year_2006>8942481.5</year_2006>
-                <year_2007>1329162.0</year_2007>
-                <year_2008>7581696.4</year_2008>
-                <year_2009>2266198.7</year_2009>
-                <year_2010>3521600.6</year_2010>
-                <year_2011>6289194.2</year_2011>
-                <year_2012>1487959.2</year_2012>
-                <year_2013>8109383.1</year_2013>
-                <year_2014>60010.0</year_2014>
-                <year_2015>3367077.3</year_2015>
-                <year_2016>8081651.4</year_2016>
+                <value year="1960">364962.0</value>
+                <value year="1961"></value>
+                <value year="1962"></value>
+                <value year="1963">984270.3</value>
+                <value year="1964">-712096.1</value>
+                <value year="1965">595113.3</value>
+                <value year="1966">-240878.0</value>
+                <value year="1967">860508.7</value>
+                <value year="1968">693168.9</value>
+                <value year="1969">-686669.5</value>
+                <value year="1970">-42565.8</value>
+                <value year="1971">-435682.6</value>
+                <value year="1972"></value>
+                <value year="1973">-235391.5</value>
+                <value year="1974">-770217.3</value>
+                <value year="1975">-940690.0</value>
+                <value year="1976">-553707.9</value>
+                <value year="1977">-593186.1</value>
+                <value year="1978">-565627.6</value>
+                <value year="1979">451203.8</value>
+                <value year="1980">383874.4</value>
+                <value year="1981">-589882.6</value>
+                <value year="1982">-277520.8</value>
+                <value year="1983">-943454.1</value>
+                <value year="1984">821585.7</value>
+                <value year="1985">-334969.4</value>
+                <value year="1986">414596.8</value>
+                <value year="1987">900235.1</value>
+                <value year="1988">888606.6</value>
+                <value year="1989">713355.9</value>
+                <value year="1990">438859.9</value>
+                <value year="1991">547103.8</value>
+                <value year="1992">903842.2</value>
+                <value year="1993">774295.2</value>
+                <value year="1994">925745.9</value>
+                <value year="1995">-962311.1</value>
+                <value year="1996">802635.8</value>
+                <value year="1997">-749901.2</value>
+                <value year="1998">-771358.6</value>
+                <value year="1999">-67098.0</value>
+                <value year="2000">-460114.1</value>
+                <value year="2001">714436.5</value>
+                <value year="2002">415335.0</value>
+                <value year="2003">-981446.9</value>
+                <value year="2004">766969.8</value>
+                <value year="2005">-211504.7</value>
+                <value year="2006">39510.5</value>
+                <value year="2007">697.0</value>
+                <value year="2008">677509.5</value>
+                <value year="2009">-304761.2</value>
+                <value year="2010">-136662.6</value>
+                <value year="2011">812438.6</value>
+                <value year="2012">-749630.5</value>
+                <value year="2013">-153353.3</value>
+                <value year="2014">545322.9</value>
+                <value year="2015">912744.5</value>
+                <value year="2016">226401.8</value>
             </region>
         </regions>
         <countries>
-            <country name="United Arab Emirates" code="ARE">
-                <year_1960>-269214.3</year_1960>
-                <year_1961>3886788.2</year_1961>
-                <year_1962>7872712.6</year_1962>
-                <year_1963>1972400.2</year_1963>
-                <year_1964>1200852.1</year_1964>
-                <year_1965>9720110.8</year_1965>
-                <year_1966>3239429.5</year_1966>
-                <year_1967></year_1967>
-                <year_1968>2604795.9</year_1968>
-                <year_1969>56464512123014169004.6565561000000001</year_1969>
-                <year_1970>1809566.6</year_1970>
-                <year_1971>8242471.3</year_1971>
-                <year_1972>7655499.2</year_1972>
-                <year_1973>7576990.6</year_1973>
-                <year_1974>8258624.9</year_1974>
-                <year_1975>1683745.7</year_1975>
-                <year_1976>7151572.6</year_1976>
-                <year_1977>265682.2</year_1977>
-                <year_1978>2761787.4</year_1978>
-                <year_1979>-743179.6</year_1979>
-                <year_1980>6481364.3</year_1980>
-                <year_1981>8580049.6</year_1981>
-                <year_1982>3848547.8</year_1982>
-                <year_1983>6217550.0</year_1983>
-                <year_1984>3090236.9</year_1984>
-                <year_1985>7240097.9</year_1985>
-                <year_1986>7003957.4</year_1986>
-                <year_1987>4739909.4</year_1987>
-                <year_1988>125500.6</year_1988>
-                <year_1989>9129344.5</year_1989>
-                <year_1990>9311039.0</year_1990>
-                <year_1991>460943.2</year_1991>
-                <year_1992>4159725.4</year_1992>
-                <year_1993>4887875.4</year_1993>
-                <year_1994>3113813.8</year_1994>
-                <year_1995>630082.9</year_1995>
-                <year_1996>7820974.7</year_1996>
-                <year_1997></year_1997>
-                <year_1998></year_1998>
-                <year_1999>-667197.4</year_1999>
-                <year_2000>525650.6</year_2000>
-                <year_2001>8006969.4</year_2001>
-                <year_2002>3205841.3</year_2002>
-                <year_2003>9462299.1</year_2003>
-                <year_2004>5303993.0</year_2004>
-                <year_2005>3079677.0</year_2005>
-                <year_2006>8942481.5</year_2006>
-                <year_2007>1329162.0</year_2007>
-                <year_2008>7581696.4</year_2008>
-                <year_2009>2266198.7</year_2009>
-                <year_2010></year_2010>
-                <year_2011>45</year_2011>
-                <year_2012>0</year_2012>
-                <year_2013>8109383.1</year_2013>
-                <year_2014>60010.0</year_2014>
-                <year_2015>3367077.3</year_2015>
-                <year_2016>8081651.4</year_2016>
-            </country>
             <country name="Central African Republic" code="CAF">
-                <year_1960></year_1960>
-                <year_1961></year_1961>
-                <year_1962></year_1962>
-                <year_1963></year_1963>
-                <year_1964></year_1964>
-                <year_1965></year_1965>
-                <year_1966></year_1966>
-                <year_1967></year_1967>
-                <year_1968></year_1968>
-                <year_1969></year_1969>
-                <year_1970></year_1970>
-                <year_1971></year_1971>
-                <year_1972></year_1972>
-                <year_1973></year_1973>
-                <year_1974></year_1974>
-                <year_1975></year_1975>
-                <year_1976></year_1976>
-                <year_1977></year_1977>
-                <year_1978></year_1978>
-                <year_1979></year_1979>
-                <year_1980></year_1980>
-                <year_1981></year_1981>
-                <year_1982></year_1982>
-                <year_1983></year_1983>
-                <year_1984></year_1984>
-                <year_1985></year_1985>
-                <year_1986></year_1986>
-                <year_1987></year_1987>
-                <year_1988></year_1988>
-                <year_1989></year_1989>
-                <year_1990></year_1990>
-                <year_1991></year_1991>
-                <year_1992></year_1992>
-                <year_1993></year_1993>
-                <year_1994></year_1994>
-                <year_1995></year_1995>
-                <year_1996></year_1996>
-                <year_1997></year_1997>
-                <year_1998></year_1998>
-                <year_1999></year_1999>
-                <year_2000></year_2000>
-                <year_2001></year_2001>
-                <year_2002></year_2002>
-                <year_2003></year_2003>
-                <year_2004></year_2004>
-                <year_2005></year_2005>
-                <year_2006></year_2006>
-                <year_2007></year_2007>
-                <year_2008></year_2008>
-                <year_2009></year_2009>
-                <year_2010></year_2010>
-                <year_2011></year_2011>
-                <year_2012></year_2012>
-                <year_2013></year_2013>
-                <year_2014></year_2014>
-                <year_2015></year_2015>
-                <year_2016></year_2016>
+                <value year="1960"></value>
+                <value year="1961"></value>
+                <value year="1962"></value>
+                <value year="1963"></value>
+                <value year="1964"></value>
+                <value year="1965"></value>
+                <value year="1966"></value>
+                <value year="1967"></value>
+                <value year="1968"></value>
+                <value year="1969"></value>
+                <value year="1970"></value>
+                <value year="1971"></value>
+                <value year="1972"></value>
+                <value year="1973"></value>
+                <value year="1974"></value>
+                <value year="1975"></value>
+                <value year="1976"></value>
+                <value year="1977"></value>
+                <value year="1978"></value>
+                <value year="1979"></value>
+                <value year="1980"></value>
+                <value year="1981"></value>
+                <value year="1982"></value>
+                <value year="1983"></value>
+                <value year="1984"></value>
+                <value year="1985"></value>
+                <value year="1986"></value>
+                <value year="1987"></value>
+                <value year="1988"></value>
+                <value year="1989"></value>
+                <value year="1990"></value>
+                <value year="1991"></value>
+                <value year="1992"></value>
+                <value year="1993"></value>
+                <value year="1994"></value>
+                <value year="1995"></value>
+                <value year="1996"></value>
+                <value year="1997"></value>
+                <value year="1998"></value>
+                <value year="1999"></value>
+                <value year="2000"></value>
+                <value year="2001"></value>
+                <value year="2002"></value>
+                <value year="2003"></value>
+                <value year="2004"></value>
+                <value year="2005"></value>
+                <value year="2006"></value>
+                <value year="2007"></value>
+                <value year="2008"></value>
+                <value year="2009"></value>
+                <value year="2010"></value>
+                <value year="2011"></value>
+                <value year="2012"></value>
+                <value year="2013"></value>
+                <value year="2014"></value>
+                <value year="2015"></value>
+                <value year="2016"></value>
+            </country>
+            <country name="Slovakia" code="SVK">
+                <value year="1960"></value>
+                <value year="1961"></value>
+                <value year="1962"></value>
+                <value year="1963"></value>
+                <value year="1964"></value>
+                <value year="1965"></value>
+                <value year="1966"></value>
+                <value year="1967"></value>
+                <value year="1968"></value>
+                <value year="1969"></value>
+                <value year="1970"></value>
+                <value year="1971"></value>
+                <value year="1972"></value>
+                <value year="1973"></value>
+                <value year="1974"></value>
+                <value year="1975"></value>
+                <value year="1976"></value>
+                <value year="1977"></value>
+                <value year="1978"></value>
+                <value year="1979"></value>
+                <value year="1980"></value>
+                <value year="1981"></value>
+                <value year="1982"></value>
+                <value year="1983"></value>
+                <value year="1984"></value>
+                <value year="1985"></value>
+                <value year="1986"></value>
+                <value year="1987"></value>
+                <value year="1988"></value>
+                <value year="1989"></value>
+                <value year="1990"></value>
+                <value year="1991"></value>
+                <value year="1992"></value>
+                <value year="1993"></value>
+                <value year="1994"></value>
+                <value year="1995"></value>
+                <value year="1996"></value>
+                <value year="1997"></value>
+                <value year="1998"></value>
+                <value year="1999"></value>
+                <value year="2000"></value>
+                <value year="2001"></value>
+                <value year="2002"></value>
+                <value year="2003"></value>
+                <value year="2004"></value>
+                <value year="2005"></value>
+                <value year="2006"></value>
+                <value year="2007"></value>
+                <value year="2008"></value>
+                <value year="2009"></value>
+                <value year="2010"></value>
+                <value year="2011"></value>
+                <value year="2012"></value>
+                <value year="2013"></value>
+                <value year="2014"></value>
+                <value year="2015"></value>
+                <value year="2016"></value>
             </country>
         </countries>
     </indicator>

@@ -1,9 +1,4 @@
 <?xml version="1.0"?>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 
 <xsd:schema version="1.0"
            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
@@ -11,63 +6,15 @@ and open the template in the editor.
     
     <xsd:group name="yearsGroup">
         <xsd:sequence>
-            <xsd:element name="year_1960" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_1961" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_1962" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_1963" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_1964" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_1965" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_1966" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_1967" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_1968" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_1969" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_1970" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_1971" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_1972" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_1973" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_1974" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_1975" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_1976" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_1977" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_1978" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_1979" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_1980" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_1981" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_1982" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_1983" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_1984" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_1985" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_1986" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_1987" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_1988" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_1989" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_1990" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_1991" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_1992" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_1993" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_1994" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_1995" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_1996" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_1997" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_1998" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_1999" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_2000" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_2001" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_2002" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_2003" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_2004" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_2005" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_2006" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_2007" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_2008" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_2009" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_2010" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_2011" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_2012" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_2013" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_2014" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_2015" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
-            <xsd:element name="year_2016" type="decimal-or-empty" minOccurs="1" maxOccurs="1"/>
+            <xsd:element name="value" maxOccurs="unbounded">
+                <xsd:complexType>
+                    <xsd:simpleContent>
+                        <xsd:extension base="decimal-or-empty">
+                            <xsd:attribute name="year" type="xsd:integer" use="required"/>
+                        </xsd:extension>
+                    </xsd:simpleContent>
+                </xsd:complexType>
+            </xsd:element>
         </xsd:sequence>
     </xsd:group>
 
@@ -112,6 +59,10 @@ and open the template in the editor.
                                                 <xsd:group ref="yearsGroup"/>
                                                 <xsd:attributeGroup ref="wrld-reg-coun"/>
                                             </xsd:complexType>
+                                            <xsd:unique name="uniqueRegionYear"> 
+                                                <xsd:selector xpath=".//value"/>
+                                                    <xsd:field xpath="@year"/>
+                                                </xsd:unique>    
                                         </xsd:element>
                                     </xsd:sequence>
                                 </xsd:complexType>
@@ -124,6 +75,10 @@ and open the template in the editor.
                                                 <xsd:group ref="yearsGroup"/>
                                                 <xsd:attributeGroup ref="wrld-reg-coun"/>
                                             </xsd:complexType>
+                                            <xsd:unique name="uniqueCountryYear"> 
+                                                <xsd:selector xpath=".//value"/>
+                                                    <xsd:field xpath="@year"/>
+                                                </xsd:unique>    
                                         </xsd:element>
                                     </xsd:sequence>
                                 </xsd:complexType>
@@ -155,7 +110,11 @@ and open the template in the editor.
                     <xsd:unique name="uniqueIndicatorCode"> 
                         <xsd:selector xpath=".//indicator"/>
                         <xsd:field xpath="@code"/>
-                    </xsd:unique>    
+                    </xsd:unique>
+                    <xsd:unique name="uniqueWorldYear"> 
+                        <xsd:selector xpath=".//world/value"/>
+                        <xsd:field xpath="@year"/>
+                    </xsd:unique>
                 </xsd:element>
             </xsd:sequence>
         </xsd:complexType>
