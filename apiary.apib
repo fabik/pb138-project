@@ -1,0 +1,113 @@
+FORMAT: 1A
+HOST: https://macrodata-api.fabik.org/
+
+# PB138 Project: Macroeconomics Data API
+
+## Indicators [/indicators]
+
+### List all indicators [GET]
+
++ Response 200 (application/xml)
+
+        <?xml version="1.0" encoding="UTF-8"?>
+        <indicators>
+            <indicator code="NY.GDP.MKTP.CD" name="GDP (current US$)"/>
+            <indicator code="NY.GDP.PCAP.CD" name="GDP per capita (current US$)"/>
+            <indicator code="NY.GNP.MKTP.CD" name="GNI (current US$)"/>
+            <indicator code="IT.NET.USER.ZS" name="Individuals using the Internet (% of population)"/>
+            <indicator code="SP.DYN.LE00.IN" name="Life expectancy at birth total (years)"/>
+            <indicator code="MS.MIL.XPND.GD.ZS" name="Military expenditure (% of GDP)"/>
+            <indicator code="PA.NUS.FCRF" name="Official exchange rate (LCU per US$ period average)"/>
+            <indicator code="SP.POP.TOTL" name="Population total"/>
+            <indicator code="SP.URB.TOTL" name="Urban population"/>
+            <indicator code="SP.URB.TOTL.IN.ZS" name="Urban population (% of total)"/>
+        </indicators>
+
+## Regions [/regions]
+
+### List all regions [GET]
+
++ Response 200 (application/xml)
+
+        <?xml version="1.0" encoding="UTF-8"?>
+        <regions>
+            <region code="ARB" name="Arab World"/>
+            <region code="CSS" name="Caribbean small states"/>
+            <region code="CEB" name="Central Europe and the Baltics"/>
+            <region code="EAS" name="East Asia &amp; Pacific"/>
+            <region code="ECS" name="Europe &amp; Central Asia"/>
+            <region code="EUU" name="European Union"/>
+            <region code="LCN" name="Latin America &amp; Caribbean"/>
+            <region code="MEA" name="Middle East &amp; North Africa"/>
+            <region code="NAC" name="North America"/>
+            <region code="PSS" name="Pacific island small states"/>
+            <region code="SAS" name="South Asia"/>
+            <region code="SSF" name="Sub-Saharan Africa"/>
+        </regions>
+
+## Countries [/countries]
+
+### List all countries [GET]
+
++ Response 200 (application/xml)
+
+        <?xml version="1.0" encoding="UTF-8"?>
+        <countries>
+            <country code="AFG" name="Afghanistan"/>
+            <country code="ALB" name="Albania"/>
+            <country code="DZA" name="Algeria"/>
+            <!-- ... -->
+            <country code="ZMB" name="Zambia"/>
+            <country code="ZWE" name="Zimbabwe"/>
+        </countries>
+
+## Search for data [/search{?indicator,start_year,end_year,regions,countries,return_world,return_regions,return_countries}]
+
++ Parameters
+
+    + indicator: `NY.GDP.MKTP.CD` (string, required) - indicator code
+    + start_year: `1960` (number, optional) - start year (default: minimum year with data)
+    + end_year: `2016` (number, optional) - end year (default: maximum year with data)
+    + regions: `ARB,CSS` (string, optional) - comma-separated list of region codes (default: all regions)
+    + countries: `AFG` (string, optional) - comma-separated list of country codes (default: all countries)
+    + return_world: `true` (boolean, optional) - return data for world (default: false)
+    + return_regions: `true` (boolean, optional) - return data for regions (default: false)
+    + return_countries: `true` (boolean, optional) - return data for countries (default: false)
+
+### Search for data [GET]
+
++ Response 200 (application/json)
+
+        <?xml version="1.0" encoding="UTF-8"?>
+        <result start-year="1960" end-year="2016">
+            <world code="WLD">
+                <value year="1960">1367200000000</value>
+                <value year="1961">1422340000000</value>
+                <value year="1962">1527580000000</value>
+                <!-- ... -->
+                <value year="2015">74188700000000</value>
+                <value year="2016"/>
+            </world>
+            <regions>
+                <region code="ARB">
+                    <value year="1960"/>
+                    <value year="1961"/>
+                    <value year="1962"/>
+                    <!-- ... --->
+                    <value year="2015">2565870000000</value>
+                    <value year="2016"/>
+                </region>
+                <!-- ... --->
+            </regions>
+            <countries>
+                <country code="AFG">
+                    <value year="1960">537777811.1</value>
+                    <value year="1961">548888895.6</value>
+                    <value year="1962">546666677.8</value>
+                    <!-- ... -->
+                    <value year="2015">19331286549</value>
+                    <value year="2016"/>
+                </country>
+                <!-- ... --->
+            </countries>
+        </result>
