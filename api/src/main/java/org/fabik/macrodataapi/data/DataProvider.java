@@ -76,10 +76,10 @@ public class DataProvider {
             "declare variable $returnRegions external;" +
             "declare variable $returnCountries external;" +
             "declare variable $indicator := doc($fileName)/data/indicator[@code = $indicatorCode];" +
-            "declare variable $startYear := fn:max((min($indicator//value/@year), $minStartYear));" +
-            "declare variable $endYear := fn:min((max($indicator//value/@year), $maxEndYear));" +
-            "declare variable $regionCodes := fn:tokenize($regionCodesString, ',');" +
-            "declare variable $countryCodes := fn:tokenize($countryCodesString, ',');" +
+            "declare variable $startYear := max((min($indicator//value/@year), $minStartYear));" +
+            "declare variable $endYear := min((max($indicator//value/@year), $maxEndYear));" +
+            "declare variable $regionCodes := tokenize($regionCodesString, ',');" +
+            "declare variable $countryCodes := tokenize($countryCodesString, ',');" +
 
             "declare variable $worldNode :=" +
                 "if ($returnWorld = '1')" +
