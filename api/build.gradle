@@ -19,10 +19,16 @@ sourceCompatibility = 1.8
 
 repositories {
 	mavenCentral()
+	maven { url 'http://files.basex.org/maven' }
+	maven { url 'http://xqj.net/maven' }
 }
 
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
+
+	compile('org.basex:basex:8.6.4')
+	compile('net.xqj:basex-xqj:1.4.0')
+	compile('javax.xml.xquery:xqj-api:1.0')
 }
