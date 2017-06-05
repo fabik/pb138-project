@@ -155,7 +155,7 @@ public class DataProvider {
     private Document createXmlDocumentFromString(String xml) throws Exception {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
-        return builder.parse(new ByteArrayInputStream(xml.getBytes()));
+        return builder.parse(new ByteArrayInputStream(xml.getBytes("UTF-8")));
     }
 
     private String formatXmlDocumentToString(Document document) throws Exception {
