@@ -38,7 +38,11 @@ public class DataProvider {
             "declare variable $fileName external;" +
             "<regions>" +
                 "{for $region in doc($fileName)/data/divisionToRegions/region" +
-                " return <region code='{data($region/@code)}' name='{data($region/@name)}'/>}" +
+                " return" +
+                    "<region code='{data($region/@code)}' name='{data($region/@name)}'>" +
+                        "{for $country in $region/country" +
+                        " return <country code='{data($country/@code)}' name='{data($country/@name)}'/>}"+
+                    "</region>}" +
             "</regions>";
 
         XQuery xquery = new XQuery(query);
@@ -49,7 +53,7 @@ public class DataProvider {
     public String getCountriesXml() throws Exception {
         String query =
             "declare variable $fileName external;" +
-            "declare variable $countries := doc($fileName)/data/indicator/countries/country;" +
+            "declare variable $countries := doc($fileName)/data/divisionToRegions/region/country;" +
             "<countries>" +
                 "{for $countryCode in distinct-values($countries/@code)" +
                 " let $country := $countries[@code = $countryCode][1]" +
