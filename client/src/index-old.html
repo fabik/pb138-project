@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>PB138 project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="pb138 project">
+    <meta name="author" content="Erik Horváth">
+
+    <!-- Bootstrap -->
+    <link href="gentelella/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="gentelella/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="gentelella/vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="gentelella/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+
+    <!-- bootstrap-progressbar -->
+    <link href="gentelella/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <!-- JQVMap -->
+    <link href="gentelella/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
+    <!-- bootstrap-daterangepicker -->
+    <link href="gentelella/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="gentelella/css/custom.min.css" rel="stylesheet">
+  </head>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+              <span class="site_title">
+                <div class="nav toggle">
+                  <a id="menu_toggle">
+                    <i class="fa fa-bars"></i>
+                  </a>
+                </div>
+                <span>Data visualization</span>
+              </span>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section">
+                <h3>Select data:</h3>
+                <ul class="nav side-menu">
+                  <li><a><i class="fa fa-bar-chart-o"></i> Data 1</a></li>
+                  <li><a><i class="fa fa-bar-chart-o"></i> Data 2</a></li>
+                  <li><a><i class="fa fa-bar-chart-o"></i> Data 3</a></li>
+                  <li><a><i class="fa fa-bar-chart-o"></i> Data 4</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- /sidebar menu -->
+
+            <!-- /menu footer buttons -->
+            <div class="sidebar-footer hidden-small">
+              <p>Data source</p>
+            </div>
+            <!-- /menu footer buttons -->
+          </div>
+        </div>
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="dashboard_graph">
+
+                <div class="row x_title">
+                  <div class="col-md-6">
+                    <h3>Sample graph</h3>
+                  </div>
+                  <div class="col-md-6">
+                    <div id="reportrange" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
+                      <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+                      <span>December 30, 2014 - January 28, 2015</span> <b class="caret"></b>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                  <!-- <div id="chart_plot_01" class="demo-placeholder"></div> -->
+                  <div style="height: 400px"><canvas id="myChart" height="100px"></canvas></div>
+                </div>
+
+                <div class="clearfix"></div>
+              </div>
+            </div>
+          </div>
+
+          <WorldCountriesMap Map -->
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+
+              <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                  <div class="x_panel">
+                    <div class="x_title">
+                      <h2>Location</h2>
+                      <ul class="nav navbar-right panel_toolbox">
+                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+                        <li><a class="close-link"><i class="fa fa-close"></i></a></li>
+                      </ul>
+                      <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                      <div class="dashboard-widget-content">
+                        <div class="col-md-4 hidden-small">
+                          <table class="countries_list">
+                            <tbody>
+                              <tr>
+                                <td>United States</td>
+                                <td class="fs15 fw700 text-right">33%</td>
+                              </tr>
+                              <tr>
+                                <td>France</td>
+                                <td class="fs15 fw700 text-right">27%</td>
+                              </tr>
+                              <tr>
+                                <td>Germany</td>
+                                <td class="fs15 fw700 text-right">16%</td>
+                              </tr>
+                              <tr>
+                                <td>Spain</td>
+                                <td class="fs15 fw700 text-right">11%</td>
+                              </tr>
+                              <tr>
+                                <td>Britain</td>
+                                <td class="fs15 fw700 text-right">10%</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div id="vmap" class="col-md-8 col-sm-12 col-xs-12" style="height:430px;"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <pre>Some note here.</pre>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+        <!-- /page content -->
+
+
+        <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+            Created as project for pb138
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="gentelella/vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="gentelella/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="gentelella/vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="gentelella/vendors/nprogress/nprogress.js"></script>
+    <!-- Chart.js -->
+    <script src="gentelella/vendors/Chart.js/dist/Chart.min.js"></script>
+    <!-- gauge.js -->
+    <script src="gentelella/vendors/gauge.js/dist/gauge.min.js"></script>
+    <!-- bootstrap-progressbar -->
+    <script src="gentelella/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <!-- iCheck -->
+    <script src="gentelella/vendors/iCheck/icheck.min.js"></script>
+    <!-- Skycons -->
+    <script src="gentelella/vendors/skycons/skycons.js"></script>
+    <!-- Flot -->
+    <script src="gentelella/vendors/Flot/jquery.flot.js"></script>
+    <script src="gentelella/vendors/Flot/jquery.flot.pie.js"></script>
+    <script src="gentelella/vendors/Flot/jquery.flot.time.js"></script>
+    <script src="gentelella/vendors/Flot/jquery.flot.stack.js"></script>
+    <script src="gentelella/vendors/Flot/jquery.flot.resize.js"></script>
+    <!-- Flot plugins -->
+    <script src="gentelella/vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+    <script src="gentelella/vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+    <script src="gentelella/vendors/flot.curvedlines/curvedLines.js"></script>
+    <!-- DateJS -->
+    <script src="gentelella/vendors/DateJS/build/date.js"></script>
+    <!-- JQVMap -->
+    <script src="gentelella/vendors/jqvmap/dist/jquery.vmap.js"></script>
+    <script src="gentelella/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="gentelella/vendors/moment/min/moment.min.js"></script>
+    <script src="gentelella/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+    <!-- Custom Theme Scripts -->
+    <script src="gentelella/js/custom.min.js"></script>
+
+    <!-- Vmap script -->
+    <script>
+      jQuery(document).ready(function () {
+        jQuery('#vmap').vectorMap({
+          map: 'world_en',
+          backgroundColor: '#ffffff',
+          color: '#ffffff',
+          hoverOpacity: 0.7,
+          selectedColor: '#666666',
+          enableZoom: true,
+          showTooltip: true,
+          scaleColors: ['#C8EEFF', '#149b7e'],
+          normalizeFunction: 'linear',
+          multiSelectRegion: true,
+          values: {"gl":"10000", "af":"16.63","al":"11.58","dz":"158.97","ao":"85.81","ag":"1.1","ar":"351.02","am":"8.83","au":"1219.72","at":"366.26","az":"52.17","bs":"7.54","bh":"21.73","bd":"105.4","bb":"3.96","by":"52.89","be":"461.33","bz":"1.43","bj":"6.49","bt":"1.4","bo":"19.18","ba":"16.2","bw":"12.5","br":"2023.53","bn":"11.96","bg":"44.84","bf":"8.67","bi":"1.47","kh":"11.36","cm":"21.88","ca":"1563.66","cv":"1.57","cf":"2.11","td":"7.59","cl":"199.18","cn":"5745.13","co":"283.11","km":"0.56","cd":"12.6","cg":"11.88","cr":"35.02","ci":"22.38","hr":"59.92","cy":"22.75","cz":"195.23","dk":"304.56","dj":"1.14","dm":"0.38","do":"50.87","ec":"61.49","eg":"216.83","sv":"21.8","gq":"14.55","er":"2.25","ee":"19.22","et":"30.94","fj":"3.15","fi":"231.98","fr":"2555.44","ga":"12.56","gm":"1.04","ge":"11.23","de":"3305.9","gh":"18.06","gr":"305.01","gd":"0.65","gt":"40.77","gn":"4.34","gw":"0.83","gy":"2.2","ht":"6.5","hn":"15.34","hk":"226.49","hu":"132.28","is":"12.77","in":"1430.02","id":"695.06","ir":"337.9","iq":"84.14","ie":"204.14","il":"201.25","it":"2036.69","jm":"13.74","jp":"5390.9","jo":"27.13","kz":"129.76","ke":"32.42","ki":"0.15","kr":"986.26","undefined":"5.73","kw":"117.32","kg":"4.44","la":"6.34","lv":"23.39","lb":"39.15","ls":"1.8","lr":"0.98","ly":"77.91","lt":"35.73","lu":"52.43","mk":"9.58","mg":"8.33","mw":"5.04","my":"218.95","mv":"1.43","ml":"9.08","mt":"7.8","mr":"3.49","mu":"9.43","mx":"1004.04","md":"5.36","mn":"5.81","me":"3.88","ma":"91.7","mz":"10.21","mm":"35.65","na":"11.45","np":"15.11","nl":"770.31","nz":"138","ni":"6.38","ne":"5.6","ng":"206.66","no":"413.51","om":"53.78","pk":"174.79","pa":"27.2","pg":"8.81","py":"17.17","pe":"153.55","ph":"189.06","pl":"438.88","pt":"223.7","qa":"126.52","ro":"158.39","ru":"1476.91","rw":"5.69","ws":"0.55","st":"0.19","sa":"434.44","sn":"12.66","rs":"38.92","sc":"0.92","sl":"1.9","sg":"217.38","sk":"8600.26","si":"46.44","sb":"0.67","za":"354.41","es":"1374.78","lk":"48.24","kn":"0.56","lc":"1","vc":"0.58","sd":"65.93","sr":"3.3","sz":"3.17","se":"444.59","ch":"522.44","sy":"59.63","tw":"426.98","tj":"5.58","tz":"22.43","th":"312.61","tl":"0.62","tg":"3.07","to":"0.3","tt":"21.2","tn":"43.86","tr":"729.05","tm":0,"ug":"17.12","ua":"136.56","ae":"239.65","gb":"2258.57","us":"14624.18","uy":"40.71","uz":"37.72","vu":"0.72","ve":"285.21","vn":"101.99","ye":"30.02","zm":"15.69","zw":"5.57"},
+          onRegionClick: function (element, code, region) {
+            var message = 'You clicked "'
+              + region
+              + '" which has the code: '
+              + code;
+            console.log(code, region, element);
+          }
+        });
+      });
+    </script>
+
+    <!-- Chart script -->
+    <script>
+    var myChart = new Chart(jQuery('#myChart')[0].getContext("2d"), {
+      type: 'line',
+      data: {
+        labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
+        datasets: [{
+          label: 'apples',
+          data: [10, 10, 3, 17, 6, 3, 7],
+          backgroundColor: "rgba(153,255,51,0.6)"
+        }, {
+          label: 'oranges',
+          data: [2, 10, 5, 5, 2, 3, 10],
+          backgroundColor: "rgba(255,153,0,0.6)"
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false
+    }
+    });
+    </script>
+
+    <!-- Application code -->
+    <!--suppress HtmlUnknownTarget -->
+    <script src="bundle.js"></script>
+  </body>
+</html>

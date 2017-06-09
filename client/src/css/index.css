@@ -1,0 +1,42 @@
+body {
+  background: #ffffff;
+}
+
+.toggle {
+  padding-top: 0;
+  width: auto;
+}
+
+.toggle a {
+  padding: 0;
+}
+
+.region-list-item {
+  color: #000;
+}
+
+.region-list-item:hover {
+  cursor: pointer;
+  background: #d6d6d6;
+}
+
+.tutorial-close {
+    float: right !important;
+}
+
+.tutorial-close:hover {
+    cursor: pointer;
+}
+
+.sidebar-footer {
+    color: #fff;
+}
+
+.sidebar-footer a {
+    color: #fff;
+}
+
+.sidebar-footer a:hover {
+    color: #80b4ff;
+    background: transparent;
+}
