@@ -42,6 +42,24 @@
     <xsd:element name="data">
         <xsd:complexType>
             <xsd:sequence>
+                <xsd:element name="divisionToRegions" minOccurs="1" maxOccurs="1">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="region" maxOccurs="unbounded">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="country" maxOccurs="unbounded">
+                                            <xsd:complexType>
+                                                <xsd:attributeGroup ref="wrld-reg-coun"/>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                    </xsd:sequence>
+                                    <xsd:attributeGroup ref="wrld-reg-coun"/>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
                 <xsd:element name="indicator" maxOccurs="unbounded">
                     <xsd:complexType>
                         <xsd:sequence>
