@@ -22,9 +22,11 @@ public class DataProvider {
 
     public String getIndicatorsXml() throws Exception {
         String query =
+            "declare default element namespace 'https://fabik.github.io/pb138-project/schema/indicators.xsd';" +
+            "declare namespace db = 'https://fabik.github.io/pb138-project/schema/data.xsd';" +
             "declare variable $fileName external;" +
             "<indicators>" +
-                "{for $indicator in doc($fileName)/data/indicator" +
+                "{for $indicator in doc($fileName)/db:data/db:indicator" +
                 " return <indicator code='{data($indicator/@code)}' name='{data($indicator/@name)}'/>}" +
             "</indicators>";
 
@@ -35,9 +37,11 @@ public class DataProvider {
 
     public String getRegionsXml() throws Exception {
         String query =
+            "declare default element namespace 'https://fabik.github.io/pb138-project/schema/regions.xsd';" +
+            "declare namespace db = 'https://fabik.github.io/pb138-project/schema/data.xsd';" +
             "declare variable $fileName external;" +
             "<regions>" +
-                "{for $region in doc($fileName)/data/divisionToRegions/region" +
+                "{for $region in doc($fileName)/db:data/db:divisionToRegions/db:region" +
                 " return" +
                     "<region code='{data($region/@code)}' name='{data($region/@name)}'>" +
                         "{for $country in $region/country" +
@@ -52,8 +56,10 @@ public class DataProvider {
 
     public String getCountriesXml() throws Exception {
         String query =
+            "declare default element namespace 'https://fabik.github.io/pb138-project/schema/countries.xsd';" +
+            "declare namespace db = 'https://fabik.github.io/pb138-project/schema/data.xsd';" +
             "declare variable $fileName external;" +
-            "declare variable $countries := doc($fileName)/data/divisionToRegions/region/country;" +
+            "declare variable $countries := doc($fileName)/db:data/db:divisionToRegions/db:region/db:country;" +
             "<countries>" +
                 "{for $countryCode in distinct-values($countries/@code)" +
                 " let $country := $countries[@code = $countryCode][1]" +
@@ -70,6 +76,8 @@ public class DataProvider {
                                      Boolean returnWorld, Boolean returnRegions, Boolean returnCountries)
             throws Exception {
         String query =
+            "declare default element namespace 'https://fabik.github.io/pb138-project/schema/search-result.xsd';" +
+            "declare namespace db = 'https://fabik.github.io/pb138-project/schema/data.xsd';" +
             "declare variable $fileName external;" +
             "declare variable $indicatorCode external;" +
             "declare variable $minStartYear as xs:integer external;" +
@@ -79,19 +87,19 @@ public class DataProvider {
             "declare variable $returnWorld external;" +
             "declare variable $returnRegions external;" +
             "declare variable $returnCountries external;" +
-            "declare variable $indicator := doc($fileName)/data/indicator[@code = $indicatorCode];" +
-            "declare variable $startYear := max((min($indicator//value/@year), $minStartYear));" +
-            "declare variable $endYear := min((max($indicator//value/@year), $maxEndYear));" +
+            "declare variable $indicator := doc($fileName)/db:data/db:indicator[@code = $indicatorCode];" +
+            "declare variable $startYear := max((min($indicator//db:value/@year), $minStartYear));" +
+            "declare variable $endYear := min((max($indicator//db:value/@year), $maxEndYear));" +
             "declare variable $regionCodes := tokenize($regionCodesString, ',');" +
             "declare variable $countryCodes := tokenize($countryCodesString, ',');" +
 
             "declare variable $worldNode :=" +
                 "if ($returnWorld = '1')" +
                     "then" +
-                        "(for $world in $indicator/world" +
+                        "(for $world in $indicator/db:world" +
                         " return" +
                             "<world code='{data($world/@code)}'>" +
-                                "{for $value in $world/value" +
+                                "{for $value in $world/db:value" +
                                 " where $value/@year >= $startYear and $value/@year <= $endYear" +
                                 " return <value year='{data($value/@year)}'>{$value/text()}</value>}" +
                             "</world>)" +
@@ -101,11 +109,11 @@ public class DataProvider {
                 "if ($returnRegions = '1')" +
                     "then" +
                         "(<regions>" +
-                            "{for $region in $indicator/regions/region" +
+                            "{for $region in $indicator/db:regions/db:region" +
                             " where count($regionCodes) = 0 or $region/@code = $regionCodes" +
                             " return" +
                                 "<region code='{data($region/@code)}'>" +
-                                    "{for $value in $region/value" +
+                                    "{for $value in $region/db:value" +
                                     " where $value/@year >= $startYear and $value/@year <= $endYear" +
                                     " return <value year='{data($value/@year)}'>{$value/text()}</value>}" +
                                 "</region>}" +
@@ -116,11 +124,11 @@ public class DataProvider {
                 "if ($returnCountries = '1')" +
                     "then" +
                         "(<countries>" +
-                            "{for $country in $indicator/countries/country" +
+                            "{for $country in $indicator/db:countries/db:country" +
                             " where count($countryCodes) = 0 or $country/@code = $countryCodes" +
                             " return" +
                                 "<country code='{data($country/@code)}'>" +
-                                    "{for $value in $country/value" +
+                                    "{for $value in $country/db:value" +
                                     " where $value/@year >= $startYear and $value/@year <= $endYear" +
                                     " return <value year='{data($value/@year)}'>{$value/text()}</value>}" +
                                 "</country>}" +
