@@ -1,5 +1,5 @@
 FORMAT: 1A
-HOST: https://macrodata-api.fabik.org/
+HOST: https://localhost:8000/
 
 # PB138 Project: Macroeconomics Data API
 
@@ -10,7 +10,7 @@ HOST: https://macrodata-api.fabik.org/
 + Response 200 (application/xml)
 
         <?xml version="1.0" encoding="UTF-8"?>
-        <indicators>
+        <indicators xmlns="https://fabik.github.io/pb138-project/schema/indicators.xsd">
             <indicator code="NY.GDP.MKTP.CD" name="GDP (current US$)"/>
             <indicator code="NY.GDP.PCAP.CD" name="GDP per capita (current US$)"/>
             <indicator code="NY.GNP.MKTP.CD" name="GNI (current US$)"/>
@@ -30,7 +30,7 @@ HOST: https://macrodata-api.fabik.org/
 + Response 200 (application/xml)
 
         <?xml version="1.0" encoding="UTF-8"?>
-        <regions>
+        <regions xmlns="https://fabik.github.io/pb138-project/schema/regions.xsd">
             <region code="ARB" name="Arab World">
                 <country code="DZA" name="Algeria"/>
                 <country code="BHR" name="Bahrain"/>
@@ -59,7 +59,7 @@ HOST: https://macrodata-api.fabik.org/
 + Response 200 (application/xml)
 
         <?xml version="1.0" encoding="UTF-8"?>
-        <countries>
+        <countries xmlns="https://fabik.github.io/pb138-project/schema/countries.xsd">
             <country code="AFG" name="Afghanistan"/>
             <country code="ALB" name="Albania"/>
             <country code="DZA" name="Algeria"/>
@@ -86,7 +86,7 @@ HOST: https://macrodata-api.fabik.org/
 + Response 200 (application/json)
 
         <?xml version="1.0" encoding="UTF-8"?>
-        <result start-year="1960" end-year="2016">
+        <result xmlns="https://fabik.github.io/pb138-project/schema/search-result.xsd" start-year="1960" end-year="2016">
             <world code="WLD">
                 <value year="1960">1367200000000</value>
                 <value year="1961">1422340000000</value>
@@ -100,11 +100,11 @@ HOST: https://macrodata-api.fabik.org/
                     <value year="1960"/>
                     <value year="1961"/>
                     <value year="1962"/>
-                    <!-- ... --->
+                    <!-- ... -->
                     <value year="2015">2565870000000</value>
                     <value year="2016"/>
                 </region>
-                <!-- ... --->
+                <!-- ... -->
             </regions>
             <countries>
                 <country code="AFG">
@@ -115,6 +115,6 @@ HOST: https://macrodata-api.fabik.org/
                     <value year="2015">19331286549</value>
                     <value year="2016"/>
                 </country>
-                <!-- ... --->
+                <!-- ... -->
             </countries>
         </result>
