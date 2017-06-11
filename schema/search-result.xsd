@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="https://fabik.github.io/pb138-project/schema/search-result.xsd"
+           targetNamespace="https://fabik.github.io/pb138-project/schema/search-result.xsd"
+           elementFormDefault="qualified">
+
+    <xs:element name="result">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="world" type="worldType" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="regions" type="regionsType" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="countries" type="countriesType" minOccurs="0" maxOccurs="1"/>
+            </xs:sequence>
+            <xs:attribute name="start-year" type="yearType" use="required"/>
+            <xs:attribute name="end-year" type="yearType" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="worldType">
+        <xs:sequence>
+            <xs:element name="value" type="valueType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="code" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="regionsType">
+        <xs:sequence>
+            <xs:element name="region" type="regionType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="regionType">
+        <xs:sequence>
+            <xs:element name="value" type="valueType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="code" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="countriesType">
+        <xs:sequence>
+            <xs:element name="country" type="countryType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="countryType">
+        <xs:sequence>
+            <xs:element name="value" type="valueType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="code" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="valueType">
+        <xs:simpleContent>
+            <xs:extension base="decimalOrEmptyType">
+                <xs:attribute name="year" type="yearType" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:simpleType name="yearType">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1000"/>
+            <xs:maxInclusive value="9999"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="decimalOrEmptyType">
+        <xs:union>
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:length value="0"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType>
+                <xs:restriction base="xs:decimal"/>
+            </xs:simpleType>
+        </xs:union>
+    </xs:simpleType>
+</xs:schema>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="https://fabik.github.io/pb138-project/schema/regions.xsd"
+           targetNamespace="https://fabik.github.io/pb138-project/schema/regions.xsd"
+           elementFormDefault="qualified">
+
+    <xs:element name="regions">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="region" type="regionType" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="regionType">
+        <xs:sequence>
+            <xs:element name="country" type="countryType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="code" type="xs:string" use="required"/>
+        <xs:attribute name="name" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="countryType">
+        <xs:sequence/>
+        <xs:attribute name="code" type="xs:string" use="required"/>
+        <xs:attribute name="name" type="xs:string" use="required"/>
+    </xs:complexType>
+</xs:schema>
