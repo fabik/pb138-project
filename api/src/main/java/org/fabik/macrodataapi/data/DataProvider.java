@@ -44,7 +44,7 @@ public class DataProvider {
                 "{for $region in doc($fileName)/db:data/db:divisionToRegions/db:region" +
                 " return" +
                     "<region code='{data($region/@code)}' name='{data($region/@name)}'>" +
-                        "{for $country in $region/country" +
+                        "{for $country in $region/db:country" +
                         " return <country code='{data($country/@code)}' name='{data($country/@name)}'/>}"+
                     "</region>}" +
             "</regions>";
