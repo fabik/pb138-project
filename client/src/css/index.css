@@ -40,3 +40,8 @@ body {
     color: #80b4ff;
     background: transparent;
 }
+
+/* autosuggest */
+body {
+    font-family: Helvetica, sans-serif;
+}

@@ -45,29 +45,13 @@ class IndicatorScopeSelection extends React.Component {
     }
   }
 
-  countriesMapClicked = (element, code, region) => {
-    const { selections } = this.props;
-    const code3 = from2To3(code);
-    const foundElem = selections.filter(selection => selection.type === 'country' && selection.country === code3);
-    const existInSelections = foundElem.size !== 0;
-
-    if(existInSelections) { // delete from selections
-      this.props.removeCountryFromSelections(code3);
-    } else { // add to selections
-      this.props.addCountryToSelection(code3);
-      this.props.updateCountriesIndicator();
-    }
-  };
-
   countriesMapSelected = (code, color) => {
-    const code3 = from2To3(code);
-    this.props.addCountryToSelection(code3, color);
+    this.props.addCountryToSelection(code, color);
     this.props.updateCountriesIndicator();
   };
 
   countriesMapDeselected = code => {
-    const code3 = from2To3(code);
-    this.props.removeCountryFromSelections(code3);
+    this.props.removeCountryFromSelections(code);
   };
 
   regionsMapSelected = (code, color) => {

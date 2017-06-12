@@ -1,11 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
+import { Row, Col, ListGroup, ListGroupItem } from 'react-bootstrap';
 import gen from 'color-generator';
+import { connect } from 'react-redux';
+import { from2To3, from3To2 } from '../countryCodesConvertor';
+
+import CountrySearch from './CountrySearch';
+
+const mapStateToProps = state => {
+  return {
+    countriesNamesMapping: state.countries.countriesNamesMapping,
+    selections: state.filters.selections.filter(({ type }) => type === 'country').toArray()
+  }
+};
 
 class Map extends React.Component {
   static propTypes = {
-    onClick: PropTypes.func,
     onSelect: PropTypes.func,
     onDeselect: PropTypes.func,
     data: PropTypes.object
@@ -21,38 +32,15 @@ class Map extends React.Component {
     }
   }
 
-  mapClicked = (element, code, region) => {
-    let newCountriesColors = this.state.countriesColors;
-    if(_.includes(this.state.selectedCountries, code)) {
-      newCountriesColors[code] = this.state.defaultColor;
-      this.setState({
-        selectedCountries: _.filter(this.state.selectedCountries, countryCode => countryCode !== code),
-        countriesColors: newCountriesColors
-      });
-
-      if(this.props.onDeselect) {
-        this.props.onDeselect(code);
-      }
-    } else {
-      const randomColor = () => gen(.7).alpha(.7).rgbaString();
-      newCountriesColors[code] = randomColor();
-      this.setState({
-        selectedCountries: this.state.selectedCountries.concat(code),
-        countriesColors: newCountriesColors
-      });
-
-      if(this.props.onSelect) {
-        this.props.onSelect(code, newCountriesColors[code]);
-      }
-    }
-
-    this.vectorMapElement.vectorMap('set', 'colors', newCountriesColors);
-    setTimeout(() => {
-      this.vectorMapElement.vectorMap('deselect', code);
+  mapClicked = (element, code2, region) => {
+    setTimeout(() => {  // prevent being selected by jqvmap
+      this.vectorMapElement.vectorMap('deselect', code2);
     }, 0);
 
-    if(this.props.onClick) {
-      this.props.onClick(element, code, region);
+    if(_.includes(this.state.selectedCountries, code2)) {
+      this.countryDeselect(code2);
+    } else {
+      this.countrySelect(code2);
     }
   };
 
@@ -244,7 +232,6 @@ class Map extends React.Component {
       "zm":"15.69",
       "zw":"5.57"};
 
-    const reactContext = this;
     this.vectorMapElement = $(this.mapElement);
     this.vectorMapElement.vectorMap({
       map: 'world_en',
@@ -257,13 +244,83 @@ class Map extends React.Component {
     });
   }
 
+  countrySelect = code2 => {
+    let newCountriesColors = this.state.countriesColors;
+    const randomColor = () => gen(.7).alpha(.7).rgbaString();
+    newCountriesColors[code2] = randomColor();
+    this.setState({
+      selectedCountries: this.state.selectedCountries.concat(code2),
+      countriesColors: newCountriesColors
+    });
+
+    this.vectorMapElement.vectorMap('set', 'colors', newCountriesColors);
+    // workaround jqvmap bug when setting color and then hovering out of region sets color back to original
+    setTimeout(() => {
+      this.vectorMapElement.vectorMap('select', code2);
+      this.vectorMapElement.vectorMap('deselect', code2);
+    }, 0);
+
+    if(this.props.onSelect) {
+      this.props.onSelect(from2To3(code2), newCountriesColors[code2]);
+    }
+  };
+
+  countryDeselect = code2 => {
+    let newCountriesColors = this.state.countriesColors;
+    newCountriesColors[code2] = this.state.defaultColor;
+    console.log('on deselect colors:', newCountriesColors);
+    this.setState({
+      selectedCountries: _.filter(this.state.selectedCountries, countryCode => countryCode !== code2),
+      countriesColors: newCountriesColors
+    });
+
+    this.vectorMapElement.vectorMap('set', 'colors', newCountriesColors);
+    // workaround jqvmap bug when setting color and then hovering out of region sets color back to original
+    setTimeout(() => {
+      this.vectorMapElement.vectorMap('select', code2);
+      this.vectorMapElement.vectorMap('deselect', code2);
+    }, 0);
+
+    if(this.props.onDeselect) {
+      this.props.onDeselect(from2To3(code2));
+    }
+  };
+
+  countryListItemClicked = code3 => {
+    this.countryDeselect(from3To2(code3));
+  };
+
+  countrySearchValue = code3 => {
+    this.countrySelect(from3To2(code3));
+  };
+
   render() {
+    const { selections, countriesNamesMapping } = this.props;
+
     return (
-      // todo: fuzzy search
-      <div style={{...this.props.style, "height": "40vw", "width": "100%"}}
-           ref={e => this.mapElement = e}/>
+      <Row>
+        <Col xs={12} sm={12} md={3} style={this.props.style}>
+          <ListGroupItem>
+            <CountrySearch onValue={this.countrySearchValue}/>
+          </ListGroupItem>
+          <ListGroup>
+            {selections.map(({ country: code, color }) =>
+              <ListGroupItem
+                className="region-list-item"
+                key={code}
+                onClick={() => this.countryListItemClicked(code)}
+                style={{background: color}}
+              >{countriesNamesMapping.get(code)}</ListGroupItem>
+            )}
+          </ListGroup>
+        </Col>
+        <Col xs={12} sm={12} md={9}>
+          <div style={{...this.props.style, "height": "40vw", "width": "100%"}}
+               ref={e => this.mapElement = e}/>
+        </Col>
+      </Row>
     )
   }
 }
 
-export default Map;
+export default connect(mapStateToProps)(Map);

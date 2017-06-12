@@ -81,15 +81,9 @@ class Map extends React.Component {
       Object.keys(regionCountriesMapping).map(regionCode => {
         const regionColor = randomColor();
         _.forEach(regionCountriesMapping[regionCode], countryCode => {
-          if(mapColors[countryCode]) {
-            //console.log("!! already exist ", countryCode)
-          }
-
           mapColors[countryCode] = regionColor;
         })
       });
-
-      //this.vectorMapElement.vectorMap('set', 'colors', mapColors);
     }
   }
 
@@ -122,6 +116,7 @@ class Map extends React.Component {
       mapColors[countryCode] = color;
     });
 
+    console.log('colors: ', regionCountriesMapping, mapColors);
     this.vectorMapElement.vectorMap('set', 'colors', mapColors);
   };
 
@@ -148,6 +143,7 @@ class Map extends React.Component {
         selectedRegions: this.state.selectedRegions.concat(code),
         regionsColors: newRegionsColors
       });
+
       this.paintRegionCountries(code, color);
 
       if(this.props.onSelect) {
@@ -168,7 +164,7 @@ class Map extends React.Component {
 
     return (
       <Row>
-        <Col md={3} style={this.props.style}>
+        <Col xs={12} sm={12} md={3} style={this.props.style}>
           <ListGroup>
             {regionsList.map(regionItem =>
               <ListGroupItem
@@ -180,7 +176,7 @@ class Map extends React.Component {
             )}
           </ListGroup>
         </Col>
-        <Col md={9}>
+        <Col xs={12} sm={12} md={9}>
           <div
             style={{...this.props.style, height: "40vw", width: "100%"}}
             ref={e => this.mapElement = e}/>
