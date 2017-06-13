@@ -23,10 +23,12 @@ Zadání a dokumentace se nachází na [wiki](https://github.com/fabik/pb138-pro
 
 [Stáhnout api-0.0.1-SNAPSHOT.jar](https://fabik.github.io/pb138-project/api/build/libs/api-0.0.1-SNAPSHOT.jar)
 
+[Stáhnout MacroDB.xml](https://fabik.github.io/pb138-project/data/MacroDB.xml) (klikněte na odkaz pravým tlačítkem a zvolte „Uložit odkaz jako...“)
+
 API lze spustit tímto příkazem:
 
 ```
-java -Dorg.basex.path=$HOME -jar api/build/libs/api-0.0.1-SNAPSHOT.jar --database.path=data/MacroDB.xml
+java -Dorg.basex.path=$HOME -jar api-0.0.1-SNAPSHOT.jar --database.path=MacroDB.xml
 ```
 
 ## Klientská aplikace
