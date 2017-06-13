@@ -26,6 +26,11 @@ public class DataProvider {
         this.fileName = fileName;
     }
 
+    /**
+     * Gets XML document with indicators.
+     * @return the XML document
+     * @throws Exception if an error occurs
+     */
     public String getIndicatorsXml() throws Exception {
         String query =
             "declare default element namespace 'https://fabik.github.io/pb138-project/schema/indicators.xsd';" +
@@ -41,6 +46,11 @@ public class DataProvider {
         return getXmlResult(xquery);
     }
 
+    /**
+     * Gets XML document with regions.
+     * @return the XML document
+     * @throws Exception if an error occurs
+     */
     public String getRegionsXml() throws Exception {
         String query =
             "declare default element namespace 'https://fabik.github.io/pb138-project/schema/regions.xsd';" +
@@ -60,6 +70,11 @@ public class DataProvider {
         return getXmlResult(xquery);
     }
 
+    /**
+     * Gets XML document with countries.
+     * @return the XML document
+     * @throws Exception if an error occurs
+     */
     public String getCountriesXml() throws Exception {
         String query =
             "declare default element namespace 'https://fabik.github.io/pb138-project/schema/countries.xsd';" +
@@ -78,6 +93,19 @@ public class DataProvider {
         return getXmlResult(xquery);
     }
 
+    /**
+     * Gets XML result of a search query.
+     * @param indicator the indicator code (required)
+     * @param startYear the start year (optional, nullable)
+     * @param endYear the end year (optional, nullable)
+     * @param regions the comma-separated list of region codes (optional, nullable)
+     * @param countries the comma-separated list of country codes (optional, nullable)
+     * @param returnWorld true if world data should be returned, false otherwise (optional, nullable)
+     * @param returnRegions true if regions data should be returned, false otherwise (optional, nullable)
+     * @param returnCountries true if countries data should be returned, false otherwise (optional, nullable)
+     * @return the XML result
+     * @throws Exception if an error occurs
+     */
     public String getSearchResultXml(String indicator, Integer startYear, Integer endYear, String regions, String countries,
                                      Boolean returnWorld, Boolean returnRegions, Boolean returnCountries)
             throws Exception {
@@ -160,22 +188,46 @@ public class DataProvider {
         return getXmlResult(xquery);
     }
 
+    /**
+     * Gets an XML result of the given XQuery query.
+     * @param xquery the XQuery query
+     * @return the XML result
+     * @throws Exception if an error occurs
+     */
     private String getXmlResult(XQuery xquery) throws Exception {
         String xml = xquery.execute(new Context());
         return normalizeXml(xml);
     }
 
+    /**
+     * Normalizes the given string representation of an XML document.
+     * @param xml the string representation of an XML document
+     * @return the normalized string representation of an XML document
+     * @throws Exception if an error occurs
+     */
     private String normalizeXml(String xml) throws Exception {
         Document document = createXmlDocumentFromString(xml);
         return formatXmlDocumentToString(document);
     }
 
+    /**
+     * Creates an instance of an XML document from the given string representation.
+     * @param xml the string representation of the XML document
+     * @return the instance of an XML document
+     * @throws Exception if an error occurs
+     */
     private Document createXmlDocumentFromString(String xml) throws Exception {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
         return builder.parse(new ByteArrayInputStream(xml.getBytes("UTF-8")));
     }
 
+    /**
+     * Formats the given XML document to string.
+     * @param document the XML document
+     * @return the string representation of the XML document
+     * @throws Exception if an error occurs
+     */
     private String formatXmlDocumentToString(Document document) throws Exception {
         TransformerFactory factory = TransformerFactory.newInstance();
         Transformer transformer = factory.newTransformer();
