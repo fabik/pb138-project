@@ -37,9 +37,14 @@ class Graph extends React.Component {
       return 0;
     }
 
+    if (minimumValue <= 0) {
+      return minimumValue;
+    }
+
     const value = minimumValue * 0.9;
     const digits = Math.floor(Math.log10(value));
     const q = Math.pow(10, digits);
+
     return Math.round(value / q) * q;
   }
 
@@ -56,7 +61,7 @@ class Graph extends React.Component {
               min: this.calculateGraphMinimum(this.props.data.datasets),
               // Include a dollar sign in the ticks
               callback: function(value, index, values) {
-                return Numeral(value).format('0,0.[00]');
+                return !value?value:Numeral(value).format('0,0.[00]');
               }
             }
           }]
@@ -116,8 +121,7 @@ class Graph extends React.Component {
         this.mergeNewDatasetsToGraph(newDatasets);
       }
 
-      const minimumGraphValue = this.calculateGraphMinimum(newDatasets);
-      this.chart.config.options.scales.yAxes[0].ticks.min = minimumGraphValue;
+      this.chart.config.options.scales.yAxes[0].ticks.min = this.calculateGraphMinimum(newDatasets);
       update = true;
     }
 
