@@ -1,4 +1,4 @@
-# Projekt PB138: Srovnání a vizualizace ekonomických údajů
+# Projekt PB138: Srovnání a vizualizace ekonomických údajů [![Build Status](https://travis-ci.org/fabik/pb138-project.svg?branch=master)](https://travis-ci.org/fabik/pb138-project)
 
 Vedoucí: [RNDr. Adam Rambousek, Ph.D.](https://is.muni.cz/auth/osoba/60380)
 
