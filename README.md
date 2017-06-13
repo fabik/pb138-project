@@ -21,7 +21,7 @@ Zadání a dokumentace se nachází na [wiki](https://github.com/fabik/pb138-pro
 
 ## Binární distribuce API
 
-[Stáhnout api-0.0.1-SNAPSHOT.jar](api/build/libs/api-0.0.1-SNAPSHOT.jar)
+[Stáhnout api-0.0.1-SNAPSHOT.jar](https://fabik.github.io/pb138-project/api/build/libs/api-0.0.1-SNAPSHOT.jar)
 
 API lze spustit tímto příkazem:
 
