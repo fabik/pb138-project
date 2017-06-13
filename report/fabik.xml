@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns="http://docbook.org/ns/docbook" version="5.0" xml:lang="cs">
+    <info>
+        <title>Záverečná zpráva projektu</title>
+        <subtitle>Srovnání a vizualizace ekonomických údajů</subtitle>
+        <author>
+            <firstname>Jan-Sebastian</firstname>
+            <surname>Fabík</surname>
+        </author>
+    </info>
+    <section>
+        <title>Příprava projektu</title>
+        <para>
+            Z nabídky dostupných témat jsem se rozhodl, že se zapojím do projektu Srovnání a vizualizace ekonomických údajů. Spolu se mnou se k tomuto projektu přihlásili Erik Horváth z Fakulty informatiky a Michal Kalinec a Matej Kminiak z Ekonomicko-správní fakulty.
+        </para>
+        <para>
+            S pomocí aplikace Doodle jsme našli termín společné schůzky. Na schůzce jsme se domluvili na rozdělení práce na čtyři části – analýzu dat včetně návrhu XML schématu, přípravu XML databáze, implementaci API a implementaci klientské aplikace (frontendu). Rámcově jsme si také rozmysleli podobu API rozhraní a frontendu.
+        </para>
+        <para>
+            Rozhodl jsem se, že si vezmu na starost implementaci API. V rámci tohoto projektu jsem si chtěl vyzkoušet práci se Spring Frameworkem a REST API ve formátu XML.
+        </para>
+        <para>
+            Založil jsem repozitář na GitHubu a sepsal jsem na wiki zodpovědnosti jednotlivých lidí v týmu. Později jsem repozitář rozšířil ještě i o jednoduché webové stránky (s pomocí GitHub Pages) a na wiki jsem podrobněji rozepsal návrh aplikace.
+        </para>
+    </section>
+    <section>
+        <title>Návrh API</title>
+        <para>
+            API jsem navrhl a zdokumentoval s pomocí nástroje Apiary. Popsal jsem v něm čtyři zdroje – makroekonomické ukazatele (indicators), regiony (regions), státy (countries) a vyhledávání v datech (search).
+        </para>
+        <para>
+            Díky tomu, že byly v dokumentaci API uvedeny příklady HTTP požadavků a odpovědí, mohl Erik začít vyvíjet frontend a využít při tom mock server, který Apiary nabízí.
+        </para>
+    </section>
+    <section>
+        <title>Implementace API</title>
+        <para>
+            Následně jsem API implementoval. Pro jednotlivé zdroje jsem založil REST controllery. V controllerech jsem data nezpracovával přímo, ale vyčlenil jsem tuto logiku do samostatné služby DataProvider. Ve službě DataProvider jsem naprogramoval transformaci vstupních parametrů na XQuery dotaz, který vygeneruje odpověď na požadavek.
+        </para>
+        <para>
+            Službu DataProvider jsem pokryl testy a integroval jsem do aplikace Travis CI pro jejich automatické spouštění.
+        </para>
+    </section>
+    <section>
+        <title>Dokončení projektu</title>
+        <para>
+            Po dokončení všech částí jsme se všichni opět sešli. Udělali jsme poslední drobné úpravy v aplikaci a připravili jsme společně prezentaci.
+        </para>
+    </section>
+</article>
