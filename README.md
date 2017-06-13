@@ -10,6 +10,8 @@ Studenti:
 
 Zadání a dokumentace se nachází na [wiki](https://github.com/fabik/pb138-project/wiki).
 
+[Prezentace](https://docs.google.com/presentation/d/1YBV20AoFXUpHA9zRh6vIg_dJr_ZMUT7VgbGj69w3sMs/edit)
+
 ## Odkazy do dokumentace
 
 - [Zadání projektu](https://github.com/fabik/pb138-project/wiki)
