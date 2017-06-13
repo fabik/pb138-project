@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<summary xmlns="http://docbook.org/ns/docbook" version="5.0" xml:lang="sk">
+  <info>
+    <title>Záverečná správa projektu</title>
+    <subtitle>Srovnání a vizualizace ekonomických údajů - XML databáza</subtitle>
+    <author>
+        <firstname>Michal</firstname>
+        <surname>Kalinec</surname>
+    </author>
+  </info>
+  <section>
+    <title>Príprava projektu</title>
+    <para>
+      Po rozdelení úloh, kde mi pripadla databáza, som si stručne naštudoval prácu s BaseX. Keď som dostal podľa dohody od Mateja dáta vo formáte .csv, najskôr som ich cez vstavaný <ulink url="http://docs.basex.org/wiki/CSV_Module">CSV modul</ulink> BaseX-u dostal do základného formátu .xml kde boli uložené jednoducho po riadkoch.
+    </para>
+    <ulink url="original.png">
+      <imageobject>
+        <imagedata width="500" fileref="original.png" format="PNG"/>
+      </imageobject>
+    </ulink>
+  </section>
+  <section>
+    <title>Transformácia dát</title>
+    <para>
+        Dáta som následne sériou XSLT transformácií zmenil, aby spĺňali prvú verziu XML schémy dodanej Matejom. Neskôr sme zistili, že je potrebné pridať prepojenie krajín a regiónov, ktoré v pôvodnom .csv dokumente chýbalo, no Honza ho našiel na stránkach, z ktorých sme dáta čerpali. Odtiaľ som toto prepojenie z HTML opäť pomocou XSLT získal vo vyhovujúcej podobe a pridal ho do našej XML databázy.
+        Vyskytol sa aj malý problém s niektorými hodnotami, ktoré boli zapísané vo vedeckej notácii, no bolo jednoduché ich do štandardnej numerickej notácie zmeniť jednoduchou aplikáciou v Jave.
+    </para>
+    <ulink url="final.png">
+      <imageobject>
+        <imagedata width="600" fileref="final.png" format="PNG"/>
+      </imageobject>
+    </ulink>
+  </section>
+  <section>
+    <title>Dokončenie projektu</title>
+    <para>
+        Na záver sme dohodli finálnu podobu aplikácie a dohodli sa ako bude samotná prezentácia projektu vyzerať.
+    </para>
+  </section>
+</summary>
