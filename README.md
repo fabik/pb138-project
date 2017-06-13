@@ -4,7 +4,7 @@ Vedoucí: [RNDr. Adam Rambousek, Ph.D.](https://is.muni.cz/auth/osoba/60380)
 
 Studenti:
 - [Jan-Sebastian Fabík](https://is.muni.cz/auth/osoba/433385) ([závěrečná zpráva](report/fabik.html))
-- [Erik Horváth](https://is.muni.cz/auth/osoba/445426)
+- [Erik Horváth](https://is.muni.cz/auth/osoba/445426)        ([závěrečná zpráva](report/horvath.html))
 - [Michal Kalinec](https://is.muni.cz/auth/osoba/444505)
 - [Matej Kminiak](https://is.muni.cz/auth/osoba/444487)
 
