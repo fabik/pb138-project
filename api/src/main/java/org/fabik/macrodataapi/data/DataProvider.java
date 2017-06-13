@@ -2,6 +2,7 @@ package org.fabik.macrodataapi.data;
 
 import org.basex.core.Context;
 import org.basex.core.cmd.XQuery;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.w3c.dom.Document;
 
@@ -18,7 +19,12 @@ import java.io.StringWriter;
 @Service
 public class DataProvider {
 
-    private String fileName = "../data/MacroDB.xml";
+    private String fileName;
+
+    @Value("${database.path}")
+    public void setFileName(String fileName) {
+        this.fileName = fileName;
+    }
 
     public String getIndicatorsXml() throws Exception {
         String query =

@@ -32,3 +32,20 @@ dependencies {
 	compile('net.xqj:basex-xqj:1.4.0')
 	compile('javax.xml.xquery:xqj-api:1.0')
 }
+
+
+jar {
+	manifest {
+		attributes 'Main-Class': 'org.fabik.macrodataapi.MacrodataapiApplication'
+	}
+}
+
+
+test {
+    systemProperty 'database.path', '../data/MacroDB.xml'
+}
+
+
+bootRun {
+    systemProperty 'database.path', '../data/MacroDB.xml'
+}
