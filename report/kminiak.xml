@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<article xmlns="http://docbook.org/ns/docbook" version="5.0" xml:lang="cs">
+    <info>
+        <title>Správa projektu</title>
+        <subtitle>Zrovnanie a vizualizácia ekonomickıch údajov</subtitle>
+        <author>
+            <firstname>Matej</firstname>
+            <surname>Kminiak</surname>
+        </author>
+    </info>
+    <section>
+        <title>Úvod</title>
+        <para>
+            Na realizácii projektu s témou Zrovnanie a vizualizácia ekonomickıch údajov som sa podie¾al so študentami Jan-Sebastian Fabík a Erik Horváth z FI a s Michalom Kalincom z ESF.
+        </para>
+        <para>
+            Po prvom stretnúti sme si rozdelili projekt na štyri èasti a ja som mal za úlohu analyzova dáta, take vyh¾ada, pripravi vo formáte CSV a následne vytvori XML Schému.
+        </para>
+    </section>
+    <section>
+        <title>Vıber dát</title>
+        <para>
+            Dáta som sa rozhodol èerpa zo stránky World Bank, kde som objavil pod¾a mòa zaujímavé makroekonomické ukazatele. 
+        </para>
+        <para>
+            Presnı popis dát je nahratı v repozitári, no môem len spomenú, e dáta boli pribline v rozmedzí rokov 1960-súèasnos. Najzaujímavejšia je svetová hodnota ukazate¾ov, no i porovnanie medzi regiónmi, èi jednotlivımi štátmi. 
+        </para>
+        <para>
+            Indikátory, ktoré som sa rozhodol vybra ako vhodné makroekonomické ukazatele sú nasledovné: HDP, HDP na obyvate¾a, Giniho koeficient, % populácie pouívajuce internet, predpokladaná dåka ivota, armádne vıdavky(% HDP), kurz domácej meny voèi doláru, celková populácia, urbanizovaná populácia.  
+        </para>
+        <para>
+            
+        </para>
+    </section>
+    <section>
+        <title>Vytvorenie XML Schema</title>
+        <para>
+            Mojou ïalšou úlohou bolo vytvori vhodné XML Schema. Po dohode s kolegami sme usúdili, e najvhodnejšie bude najskôr krajiny usporiada do regíonov, následne boli údaje pre svet, regióny a štáty.
+        </para>
+        <para>
+            Prvotnú verziu som neskôr upravoval, pretoe rozhodnutie oh¾adom pridelení štátov k regiónom padlo a v nasledovnıch fázach projektu. V prvotnej verzii dát to nebolo moné, keïe medzi regiónmy a štátmi nebol iadny vzah. O to sa postaral Michal pomocou XSLT.
+        </para>
+    </section>
+    <section>
+        <title>Záver</title>
+        <para>
+            Na záver sme sa všetci stretli, aby sme vychytali posledné nedostatky a spoloène sa pripravili na obhajobu projektu.
+        </para>
+    </section>
+</article>
