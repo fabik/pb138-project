@@ -42,7 +42,7 @@ jar {
 
 
 test {
-    systemProperty 'database.path', '../data/MacroDB.xml'
+    systemProperty 'database.path', '../data/MacroDB-test.xml'
 }
 
 
