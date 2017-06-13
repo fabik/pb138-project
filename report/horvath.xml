@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns="http://docbook.org/ns/docbook" version="5.0" xml:lang="cs">
+    <info>
+        <title>Záverečná zpráva projektu</title>
+        <subtitle>Srovnání a vizualizace ekonomických údajů - klient</subtitle>
+        <author>
+            <firstname>Erik</firstname>
+            <surname>Horváth</surname>
+        </author>
+    </info>
+    <section>
+        <title>Príprava projektu</title>
+        <para>
+          Pri rozdelení úloh som si vybral klientskú časť. S tímom sme sa ju rozhodli implementovať webovou aplikáciou (single page aplication).
+        </para>
+        <para>
+          Mal som skúsenosti s Reactom a Reduxom z minulosti a tieto technológie sa na tento projekt hodili. Navyše sme sa dohodli na dizajne, ktorý je Gentelella admin template, postavený na bootstrape.
+        </para>
+        <para>
+          Veľkú časť pribalených knihovní som nepoužil, pretože boli pre túto aplicáciu zbytočné (napríklad počasie, profil, prihlasovanie). Ponechal som ale ChartJS, JSVectormap a NProgress.
+        </para>
+        <para>
+          Jan vytvoril mock api na apiary.io a mohol som začať vyvíjať frontend. Postupne som pridal potrebné balíčky, ich zoznam sa dá nájsť v <code>package.json</code>
+        </para>
+    </section>
+    <section>
+        <title>Návrh frontendu</title>
+        <para>
+          Hlavná myšlienka bola intuitívnosť pre užívateľa. Frontend si vyžiada len tie dáta, ktoré v danom okamihu potrebuje.
+        </para>
+        <para>
+          Aplikácia je rozdelená na komponenty, stav aplikácie sa uchováva v redux store. Na asynchrónne api volania som použil redux-thunk. Veľká časť store je tvorená Immutable objektami.
+        </para>
+        <para>
+          Aplikácia podporuje React a Redux vývojárske prídavky do Chrome.
+        </para>
+    </section>
+    <section>
+        <title>Implementácia frontendu</title>
+        <para>
+          Najskôr som implementoval základnú funkcionalitu pomocou apiary mocku. Následne som počkal na implementáciu api a dokončil funkčný frontend.
+        </para>
+        <para>
+          Výsledká aplikácia sa dá spustiť vo vývojárskom móde <code>npm run dev</code> alebo skompilovať pomocou <code>npm run production</code> a výstup sa nachádza v <code>/dist</code> priečinku.
+        </para>
+    </section>
+    <section>
+        <title>Dokončenie projektu</title>
+        <para>
+          Po dokončení sme sa zišli s tímom a upravili pár maličkostí a vytvorili prezentáciu.
+        </para>
+    </section>
+</article>
