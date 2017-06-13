@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Data visualization - client</title><link rel="stylesheet" type="text/css" href="style.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.79.1" /></head><body><div class="article"><div class="titlepage"><div><div><h2 class="title"><a id="idm46107358287408"></a>Data visualization - client</h2></div></div><hr /></div><div class="toc"><p><strong>Table of Contents</strong></p><dl class="toc"><dt><span class="sect1"><a href="#idm46107358285168">Application description</a></span></dt><dt><span class="sect1"><a href="#idm46107358282912">Technologies used</a></span></dt><dt><span class="sect1"><a href="#idm46107362048816">Build process</a></span></dt><dt><span class="sect1"><a href="#idm46107362226784">Project files structure</a></span></dt><dt><span class="sect1"><a href="#idm46107362225600">File structure</a></span></dt><dt><span class="sect1"><a href="#idm46107362222752">Redux store</a></span></dt><dt><span class="sect1"><a href="#idm46107362219472">Using application</a></span></dt></dl></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idm46107358285168"></a>Application description</h2></div></div></div><p>
+      Simple web application for data visualization. It expect backend to be running on <code class="code">http://localhost:8080</code>.
+    </p></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idm46107358282912"></a>Technologies used</h2></div></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: opencircle; "><li class="listitem" style="list-style-type: circle"><p>
+          <span class="emphasis"><em>React</em></span>
+        </p></li><li class="listitem" style="list-style-type: circle"><p>
+          <span class="emphasis"><em>Redux</em></span> + redux-thunk (for async API calls)
+        </p></li><li class="listitem" style="list-style-type: circle"><p>
+          <span class="emphasis"><em>Bootstrap</em></span> (<a class="ulink" href="https://github.com/puikinsh/gentelella" target="_top">Gentelella admin template</a>)
+        </p></li><li class="listitem" style="list-style-type: circle"><p>
+          <span class="emphasis"><em>JQVectormap</em></span>
+        </p></li><li class="listitem" style="list-style-type: circle"><p>
+          <span class="emphasis"><em>ChartJS</em></span>
+        </p></li><li class="listitem" style="list-style-type: circle"><p>
+          <span class="emphasis"><em>Webpack</em></span>
+        </p></li><li class="listitem" style="list-style-type: circle"><p>
+          <span class="emphasis"><em>Node.js</em></span>
+        </p></li></ul></div></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idm46107362048816"></a>Build process</h2></div></div></div><p>
+      This project can be build both for development and production use. In development mode webpack will run dev server
+      on <a class="ulink" href="http://localhost:8088" target="_top">http://localhost:8088</a>. In production mode resulting files can be found in <code class="code">/dist</code> folder.
+    </p><p>Development mode:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>
+          Navigate to same directory where <code class="code">package.json</code> is located.
+        </p></li><li class="listitem"><p>
+          Run <code class="code">npm install</code>. This downloads all necessary dependencies.
+        </p></li><li class="listitem"><p>
+          Run <code class="code">npm run dev</code>. This runs development server on <a class="ulink" href="http://localhost:8088" target="_top">http://localhost:8088</a>.
+        </p></li></ol></div><p>Production mode:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>
+          (Optional) If you need to change host API, you can edit <code class="code">/src/apiConfig.js</code>
+        </p></li><li class="listitem"><p>
+          Navigate to same directory where <code class="code">package.json</code> is located.
+        </p></li><li class="listitem"><p>
+          Run <code class="code">npm install</code>. This downloads all necessary dependencies.
+        </p></li><li class="listitem"><p>
+          Run <code class="code">npm run production</code>. This compiles files for production use.
+        </p></li><li class="listitem"><p>
+          Files from <code class="code">/dist</code> directory can be placed into public web folder for any web server.
+        </p></li></ol></div></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idm46107362226784"></a>Project files structure</h2></div></div></div></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idm46107362225600"></a>File structure</h2></div></div></div><a class="ulink" href="files.png" target="_top">
+      <table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="300"><tr><td><img src="files.png" width="300" /></td></tr></table>
+    </a></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idm46107362222752"></a>Redux store</h2></div></div></div><p>
+      Redux store chart after initial load.
+    </p><a class="ulink" href="store.png" target="_top">
+      <table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="600"><tr><td><img src="store.png" width="600" /></td></tr></table>
+    </a></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idm46107362219472"></a>Using application</h2></div></div></div><p>
+      </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">Select indicator from left side menu</li><li class="listitem">Select date range from top right</li><li class="listitem">Select regions/countries from bottom</li></ul></div><p>
+    </p><a class="ulink" href="tuto.png" target="_top">
+      <table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="600"><tr><td><img src="tuto.png" width="600" /></td></tr></table>
+    </a></div></div></body></html>

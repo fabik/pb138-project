@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN" "http://docbook.org/xml/4.2/docbookx.dtd">
+<article>
+  <title>Data visualization - client</title>
+
+  <sect1>
+    <title>Application description</title>
+    <para>
+      Simple web application for data visualization. It expect backend to be running on <code>http://localhost:8080</code>.
+    </para>
+  </sect1>
+
+  <sect1>
+    <title>Technologies used</title>
+    <itemizedlist mark="opencircle">
+      <listitem>
+        <para>
+          <emphasis>React</emphasis>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis>Redux</emphasis> + redux-thunk (for async API calls)
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis>Bootstrap</emphasis> (<ulink url="https://github.com/puikinsh/gentelella">Gentelella admin template</ulink>)
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis>JQVectormap</emphasis>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis>ChartJS</emphasis>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis>Webpack</emphasis>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis>Node.js</emphasis>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect1>
+
+  <sect1>
+    <title>Build process</title>
+    <para>
+      This project can be build both for development and production use. In development mode webpack will run dev server
+      on <ulink url="http://localhost:8088">http://localhost:8088</ulink>. In production mode resulting files can be found in <code>/dist</code> folder.
+    </para>
+    <para>Development mode:</para>
+    <orderedlist numeration="arabic">
+      <listitem>
+        <para>
+          Navigate to same directory where <code>package.json</code> is located.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Run <code>npm install</code>. This downloads all necessary dependencies.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Run <code>npm run dev</code>. This runs development server on <ulink url="http://localhost:8088">http://localhost:8088</ulink>.
+        </para>
+      </listitem>
+    </orderedlist>
+    <para>Production mode:</para>
+    <orderedlist numeration="arabic">
+      <listitem>
+        <para>
+          (Optional) If you need to change host API, you can edit <code>/src/apiConfig.js</code>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Navigate to same directory where <code>package.json</code> is located.
+        </para>
+      </listitem>
+
+      <listitem>
+        <para>
+          Run <code>npm install</code>. This downloads all necessary dependencies.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Run <code>npm run production</code>. This compiles files for production use.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Files from <code>/dist</code> directory can be placed into public web folder for any web server.
+        </para>
+      </listitem>
+    </orderedlist>
+  </sect1>
+
+  <sect1>
+    <title>Project files structure</title>
+    <!-- todo: image of files structure -->
+  </sect1>
+
+  <sect1>
+    <title>File structure</title>
+    <ulink url="files.png">
+      <imageobject>
+        <imagedata width="300" fileref="files.png" format="PNG"/>
+      </imageobject>
+    </ulink>
+  </sect1>
+
+  <sect1>
+    <title>Redux store</title>
+    <para>
+      Redux store chart after initial load.
+    </para>
+    <ulink url="store.png">
+      <imageobject>
+        <imagedata width="600" fileref="store.png" format="PNG"/>
+      </imageobject>
+    </ulink>
+  </sect1>
+
+  <sect1>
+    <title>Using application</title>
+    <para>
+      <itemizedlist>
+        <listitem>Select indicator from left side menu</listitem>
+        <listitem>Select date range from top right</listitem>
+        <listitem>Select regions/countries from bottom</listitem>
+      </itemizedlist>
+    </para>
+    <ulink url="tuto.png">
+      <imageobject>
+        <imagedata width="600" fileref="tuto.png" format="PNG"/>
+      </imageobject>
+    </ulink>
+  </sect1>
+</article>
