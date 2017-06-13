@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
-
-import YearSelection from './YearSelection';
+import Numeral from 'numeral';
 
 class Graph extends React.Component {
   //noinspection JSUnusedGlobalSymbols,JSUnresolvedFunction,JSUnresolvedVariable
@@ -21,13 +20,47 @@ class Graph extends React.Component {
     super();
   }
 
+  calculateGraphMinimum(datasets) {
+    if(!datasets) {
+      return 0;
+    }
+
+    let minimumValue = Number.MAX_VALUE;
+    _.forEach(datasets, dataset => {
+      const datasetMinimum = _.min(dataset.data);
+      if(minimumValue > datasetMinimum) {
+        minimumValue = datasetMinimum;
+      }
+    });
+
+    if (minimumValue === Number.MAX_VALUE) {
+      return 0;
+    }
+
+    const value = minimumValue * 0.9;
+    const digits = Math.floor(Math.log10(value));
+    const q = Math.pow(10, digits);
+    return Math.round(value / q) * q;
+  }
+
   componentDidMount() {
     this.chart = new Chart(this.chartElement.getContext("2d"), {
       type: this.props.type,  // http://www.chartjs.org/docs/latest/charts
       data: this.props.data,
       options: {
         responsive: true,
-        maintainAspectRatio: false
+        maintainAspectRatio: false,
+        scales: {
+          yAxes: [{
+            ticks: {
+              min: this.calculateGraphMinimum(this.props.data.datasets),
+              // Include a dollar sign in the ticks
+              callback: function(value, index, values) {
+                return Numeral(value).format('0,0.[00]');
+              }
+            }
+          }]
+        }
       }
     });
   }
@@ -82,6 +115,9 @@ class Graph extends React.Component {
         // diff algorithm to update only specific sets
         this.mergeNewDatasetsToGraph(newDatasets);
       }
+
+      const minimumGraphValue = this.calculateGraphMinimum(newDatasets);
+      this.chart.config.options.scales.yAxes[0].ticks.min = minimumGraphValue;
       update = true;
     }
 

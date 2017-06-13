@@ -8,6 +8,7 @@ import { indicatorsFetch, selectIndicator } from '../actions/indicators';
 import { regionsFetch } from '../actions/regions';
 import { countriesFetch } from '../actions/countries';
 import { updateWorldIndicator, updateCountriesIndicator, updateRegionsIndicator } from '../actions/data';
+import { addSelection } from '../actions/filters';
 
 const mapStateToProps = state => {
   return {
@@ -25,7 +26,8 @@ const mapDispatchToProps = dispatch => {
     selectIndicator: (indicator) => dispatch(selectIndicator(indicator)),
     updateWorldIndicator: () => dispatch(updateWorldIndicator()),
     updateCountriesIndicator: () => dispatch(updateCountriesIndicator()),
-    updateRegionsIndicator: () => dispatch(updateRegionsIndicator())
+    updateRegionsIndicator: () => dispatch(updateRegionsIndicator()),
+    addDefaultSelection: () => dispatch(addSelection("SP.POP.TOTL", { type: 'world' }))
   }
 };
 
@@ -42,6 +44,13 @@ class App extends React.Component {
     this.props.loadIndicators();
     this.props.loadRegions();
     this.props.loadCountries();
+  }
+
+  componentDidMount() {
+    // display default indicator
+    this.props.selectIndicator("SP.POP.TOTL");
+    this.props.addDefaultSelection();
+    this.props.updateWorldIndicator();
   }
 
   render() {

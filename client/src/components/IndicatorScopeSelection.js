@@ -40,7 +40,6 @@ class IndicatorScopeSelection extends React.Component {
     super();
 
     this.state = {
-      worldSelected: false,
       selectedScope: 'countries'  // 'regions'|'countries'
     }
   }
@@ -65,18 +64,15 @@ class IndicatorScopeSelection extends React.Component {
   };
 
   worldClicked = () => {
-    const { worldSelected: ws } = this.state;
+    const { selections } = this.props;
+    const worldSelection = selections.find(s => s.type === 'world');
 
-    if(ws) {
+    if(worldSelection) {
       this.props.removeWorldFromSelections();
     } else {
       this.props.addWorldToSelections();
       this.props.updateWorldIndicator();
     }
-
-    this.setState({
-      worldSelected: !ws
-    });
   };
 
   regionsClicked = () => {
@@ -92,7 +88,9 @@ class IndicatorScopeSelection extends React.Component {
   };
 
   render() {
-    const { selectedScope: sc, worldSelected: ws } = this.state;
+    const { selectedScope: sc } = this.state;
+    const { selections } = this.props;
+    const worldSelection = selections.find(s => s.type === 'world');
 
     return (
       <Row className="scope-selection">
@@ -104,8 +102,8 @@ class IndicatorScopeSelection extends React.Component {
             <Col xs={9} sm={9} md={9}>
               <ButtonToolbar>
                 <Button onClick={this.worldClicked}
-                        active={ws}
-                        style={ws?{backgroundColor: this.props.selections.find(s => s.type === 'world').color}:{}}
+                        active={worldSelection !== undefined}
+                        style={worldSelection !== undefined?{backgroundColor: worldSelection.color}:{}}
                 >World</Button>
                 <Button onClick={this.regionsClicked} active={sc === 'regions'}>Regions</Button>
                 <Button onClick={this.countriesClicked} active={sc === 'countries'}>Countries</Button>

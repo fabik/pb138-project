@@ -268,7 +268,6 @@ class Map extends React.Component {
   countryDeselect = code2 => {
     let newCountriesColors = this.state.countriesColors;
     newCountriesColors[code2] = this.state.defaultColor;
-    console.log('on deselect colors:', newCountriesColors);
     this.setState({
       selectedCountries: _.filter(this.state.selectedCountries, countryCode => countryCode !== code2),
       countriesColors: newCountriesColors
@@ -314,7 +313,7 @@ class Map extends React.Component {
             )}
           </ListGroup>
         </Col>
-        <Col xs={12} sm={12} md={9}>
+        <Col xs={12 } sm={12} md={9}>
           <div style={{...this.props.style, "height": "40vw", "width": "100%"}}
                ref={e => this.mapElement = e}/>
         </Col>

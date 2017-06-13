@@ -116,7 +116,6 @@ class Map extends React.Component {
       mapColors[countryCode] = color;
     });
 
-    console.log('colors: ', regionCountriesMapping, mapColors);
     this.vectorMapElement.vectorMap('set', 'colors', mapColors);
   };
 
