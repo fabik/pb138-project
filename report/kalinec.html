@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Záverečná správa projektu</title><meta name="generator" content="DocBook XSL Stylesheets V1.79.1"/></head><body><div xml:lang="sk" class="article"><div class="titlepage"><div><div><h1 class="title"><a id="idm92704777296"/>Záverečná správa projektu</h1></div><div><h3 class="subtitle"><em>Srovnání a vizualizace ekonomických údajů - XML databáza</em></h3></div><div><div class="author"><h3 class="author"><span class="firstname">Michal</span> <span class="surname">Kalinec</span></h3></div></div></div><hr/></div><div class="toc"><p><strong>Obsah</strong></p><dl class="toc"><dt><span class="section"><a href="#idm92704774256">Príprava projektu</a></span></dt><dt><span class="section"><a href="#idm92704769984">Transformácia dát</a></span></dt><dt><span class="section"><a href="#idm92704766896">Dokončenie projektu</a></span></dt></dl></div><div class="section"><div class="titlepage"><div><div><h2 class="title"><a id="idm92704774256"/>Príprava projektu</h2></div></div></div><p>
+      Po rozdelení úloh, kde mi pripadla databáza, som si stručne naštudoval prácu s BaseX. Keď som dostal podľa dohody od Mateja dáta vo formáte .csv, najskôr som ich cez vstavaný <a class="ulink" href="http://docs.basex.org/wiki/CSV_Module">CSV modul</a> BaseX-u dostal do základného formátu .xml kde boli uložené jednoducho po riadkoch.
+    </p><a class="ulink" href="original.png">
+      <img src="original.png" width="500"/>
+    </a></div><div class="section"><div class="titlepage"><div><div><h2 class="title"><a id="idm92704769984"/>Transformácia dát</h2></div></div></div><p>
+        Dáta som následne sériou XSLT transformácií zmenil, aby spĺňali prvú verziu XML schémy dodanej Matejom. Neskôr sme zistili, že je potrebné pridať prepojenie krajín a regiónov, ktoré v pôvodnom .csv dokumente chýbalo, no Honza ho našiel na stránkach, z ktorých sme dáta čerpali. Odtiaľ som toto prepojenie z HTML opäť pomocou XSLT získal vo vyhovujúcej podobe a pridal ho do našej XML databázy.
+        Vyskytol sa aj malý problém s niektorými hodnotami, ktoré boli zapísané vo vedeckej notácii, no bolo jednoduché ich do štandardnej numerickej notácie zmeniť jednoduchou aplikáciou v Jave.
+    </p><a class="ulink" href="final.png">
+      <img src="final.png" width="600"/>
+    </a></div><div class="section"><div class="titlepage"><div><div><h2 class="title"><a id="idm92704766896"/>Dokončenie projektu</h2></div></div></div><p>
+        Na záver sme dohodli finálnu podobu aplikácie a dohodli sa ako bude samotná prezentácia projektu vyzerať.
+    </p></div></div></body></html>

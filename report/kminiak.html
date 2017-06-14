@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Správa projektu</title><meta name="generator" content="DocBook XSL Stylesheets V1.79.1"/></head><body><div xml:lang="sk" class="article"><div class="titlepage"><div><div><h1 class="title"><a id="idm457304522368"/>Správa projektu</h1></div><div><h3 class="subtitle"><em>Zrovnanie a vizualizácia ekonomických údajov</em></h3></div><div><div class="author"><h3 class="author"><span class="firstname">Matej</span> <span class="surname">Kminiak</span></h3></div></div></div><hr/></div><div class="toc"><p><strong>Obsah</strong></p><dl class="toc"><dt><span class="section"><a href="#idm457256195312">Úvod</a></span></dt><dt><span class="section"><a href="#idm457304871888">Výber dát</a></span></dt><dt><span class="section"><a href="#idm457256212624">Vytvorenie XML Schema</a></span></dt><dt><span class="section"><a href="#idm457249636992">Záver</a></span></dt></dl></div><div class="section"><div class="titlepage"><div><div><h2 class="title"><a id="idm457256195312"/>Úvod</h2></div></div></div><p>
+            Na realizácii projektu s témou Zrovnanie a vizualizácia ekonomických údajov som sa podie¾al so študentami Jan-Sebastian Fabík a Erik Horváth z FI a s Michalom Kalincom z ESF.
+        </p><p>
+            Po prvom stretnúti sme si rozdelili projekt na štyri èasti a ja som mal za úlohu analyzova dáta, takže vyh¾ada, pripravi vo formáte CSV a následne vytvori XML Schému.
+        </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title"><a id="idm457304871888"/>Výber dát</h2></div></div></div><p>
+            Dáta som sa rozhodol èerpa zo stránky World Bank, kde som objavil pod¾a mòa zaujímavé makroekonomické ukazatele. 
+        </p><p>
+            Presný popis dát je nahratý v repozitári, no môžem len spomenú, že dáta boli približne v rozmedzí rokov 1960-súèasnos. Najzaujímavejšia je svetová hodnota ukazate¾ov, no i porovnanie medzi regiónmi, èi jednotlivými štátmi. 
+        </p><p>
+            Indikátory, ktoré som sa rozhodol vybra ako vhodné makroekonomické ukazatele sú nasledovné: HDP, HDP na obyvate¾a, Giniho koeficient, % populácie používajuce internet, predpokladaná dåžka života, armádne výdavky(% HDP), kurz domácej meny voèi doláru, celková populácia, urbanizovaná populácia.  
+        </p><p>
+            
+        </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title"><a id="idm457256212624"/>Vytvorenie XML Schema</h2></div></div></div><p>
+            Mojou ïalšou úlohou bolo vytvori vhodné XML Schema. Po dohode s kolegami sme usúdili, že najvhodnejšie bude najskôr krajiny usporiada do regíonov, následne boli údaje pre svet, regióny a štáty.
+        </p><p>
+            Prvotnú verziu som neskôr upravoval, pretože rozhodnutie oh¾adom pridelení štátov k regiónom padlo až v nasledovných fázach projektu. V prvotnej verzii dát to nebolo možné, keïže medzi regiónmy a štátmi nebol žiadny vzah. O to sa postaral Michal pomocou XSLT.
+        </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title"><a id="idm457249636992"/>Záver</h2></div></div></div><p>
+            Na záver sme sa všetci stretli, aby sme vychytali posledné nedostatky a spoloène sa pripravili na obhajobu projektu.
+        </p></div></div></body></html>
