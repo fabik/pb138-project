@@ -45,7 +45,7 @@ class Graph extends React.Component {
     const digits = Math.floor(Math.log10(value));
     const q = Math.pow(10, digits);
 
-    return Math.round(value / q) * q;
+    return Math.floor(value / q) * q;
   }
 
   componentDidMount() {
