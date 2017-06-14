@@ -4,9 +4,9 @@ Vedoucí: [RNDr. Adam Rambousek, Ph.D.](https://is.muni.cz/auth/osoba/60380)
 
 Studenti:
 - [Jan-Sebastian Fabík](https://is.muni.cz/auth/osoba/433385) ([závěrečná zpráva](report/fabik.html))
-- [Erik Horváth](https://is.muni.cz/auth/osoba/445426)        ([závěrečná zpráva](report/horvath.html))
-- [Michal Kalinec](https://is.muni.cz/auth/osoba/444505)
-- [Matej Kminiak](https://is.muni.cz/auth/osoba/444487)
+- [Erik Horváth](https://is.muni.cz/auth/osoba/445426) ([závěrečná zpráva](report/horvath.html))
+- [Michal Kalinec](https://is.muni.cz/auth/osoba/444505) ([závěrečná zpráva](report/kalinec.html))
+- [Matej Kminiak](https://is.muni.cz/auth/osoba/444487) ([závěrečná zpráva](report/kminiak.html))
 
 Zadání a dokumentace se nachází na [wiki](https://github.com/fabik/pb138-project/wiki).
 
