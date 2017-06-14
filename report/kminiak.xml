@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<article xmlns="http://docbook.org/ns/docbook" version="5.0" xml:lang="cs">
+<article xmlns="http://docbook.org/ns/docbook" version="5.0" xml:lang="sk">
     <info>
-        <title>Správa projektu</title>
-        <subtitle>Zrovnanie a vizualizácia ekonomickıch údajov</subtitle>
+        <title>SprÃ¡va projektu</title>
+        <subtitle>Zrovnanie a vizualizÃ¡cia ekonomickÃ½ch Ãºdajov</subtitle>
         <author>
             <firstname>Matej</firstname>
             <surname>Kminiak</surname>
         </author>
     </info>
     <section>
-        <title>Úvod</title>
+        <title>Ãšvod</title>
         <para>
-            Na realizácii projektu s témou Zrovnanie a vizualizácia ekonomickıch údajov som sa podie¾al so študentami Jan-Sebastian Fabík a Erik Horváth z FI a s Michalom Kalincom z ESF.
+            Na realizÃ¡cii projektu s tÃ©mou Zrovnanie a vizualizÃ¡cia ekonomickÃ½ch Ãºdajov som sa podieÂ¾al so Å¡tudentami Jan-Sebastian FabÃ­k a Erik HorvÃ¡th z FI a s Michalom Kalincom z ESF.
         </para>
         <para>
-            Po prvom stretnúti sme si rozdelili projekt na štyri èasti a ja som mal za úlohu analyzova dáta, take vyh¾ada, pripravi vo formáte CSV a následne vytvori XML Schému.
+            Po prvom stretnÃºti sme si rozdelili projekt na Å¡tyri Ã¨asti a ja som mal za Ãºlohu analyzovaÂ dÃ¡ta, takÅ¾e vyhÂ¾adaÂ, pripraviÂ vo formÃ¡te CSV a nÃ¡sledne vytvoriÂ XML SchÃ©mu.
         </para>
     </section>
     <section>
-        <title>Vıber dát</title>
+        <title>VÃ½ber dÃ¡t</title>
         <para>
-            Dáta som sa rozhodol èerpa zo stránky World Bank, kde som objavil pod¾a mòa zaujímavé makroekonomické ukazatele. 
+            DÃ¡ta som sa rozhodol Ã¨erpaÂ zo strÃ¡nky World Bank, kde som objavil podÂ¾a mÃ²a zaujÃ­mavÃ© makroekonomickÃ© ukazatele. 
         </para>
         <para>
-            Presnı popis dát je nahratı v repozitári, no môem len spomenú, e dáta boli pribline v rozmedzí rokov 1960-súèasnos. Najzaujímavejšia je svetová hodnota ukazate¾ov, no i porovnanie medzi regiónmi, èi jednotlivımi štátmi. 
+            PresnÃ½ popis dÃ¡t je nahratÃ½ v repozitÃ¡ri, no mÃ´Å¾em len spomenÃºÂ, Å¾e dÃ¡ta boli pribliÅ¾ne v rozmedzÃ­ rokov 1960-sÃºÃ¨asnosÂ. NajzaujÃ­mavejÅ¡ia je svetovÃ¡ hodnota ukazateÂ¾ov, no i porovnanie medzi regiÃ³nmi, Ã¨i jednotlivÃ½mi Å¡tÃ¡tmi. 
         </para>
         <para>
-            Indikátory, ktoré som sa rozhodol vybra ako vhodné makroekonomické ukazatele sú nasledovné: HDP, HDP na obyvate¾a, Giniho koeficient, % populácie pouívajuce internet, predpokladaná dåka ivota, armádne vıdavky(% HDP), kurz domácej meny voèi doláru, celková populácia, urbanizovaná populácia.  
+            IndikÃ¡tory, ktorÃ© som sa rozhodol vybraÂ ako vhodnÃ© makroekonomickÃ© ukazatele sÃº nasledovnÃ©: HDP, HDP na obyvateÂ¾a, Giniho koeficient, % populÃ¡cie pouÅ¾Ã­vajuce internet, predpokladanÃ¡ dÃ¥Å¾ka Å¾ivota, armÃ¡dne vÃ½davky(% HDP), kurz domÃ¡cej meny voÃ¨i dolÃ¡ru, celkovÃ¡ populÃ¡cia, urbanizovanÃ¡ populÃ¡cia.  
         </para>
         <para>
             
@@ -35,16 +35,16 @@
     <section>
         <title>Vytvorenie XML Schema</title>
         <para>
-            Mojou ïalšou úlohou bolo vytvori vhodné XML Schema. Po dohode s kolegami sme usúdili, e najvhodnejšie bude najskôr krajiny usporiada do regíonov, následne boli údaje pre svet, regióny a štáty.
+            Mojou Ã¯alÅ¡ou Ãºlohou bolo vytvoriÂ vhodnÃ© XML Schema. Po dohode s kolegami sme usÃºdili, Å¾e najvhodnejÅ¡ie bude najskÃ´r krajiny usporiadaÂ do regÃ­onov, nÃ¡sledne boli Ãºdaje pre svet, regiÃ³ny a Å¡tÃ¡ty.
         </para>
         <para>
-            Prvotnú verziu som neskôr upravoval, pretoe rozhodnutie oh¾adom pridelení štátov k regiónom padlo a v nasledovnıch fázach projektu. V prvotnej verzii dát to nebolo moné, keïe medzi regiónmy a štátmi nebol iadny vzah. O to sa postaral Michal pomocou XSLT.
+            PrvotnÃº verziu som neskÃ´r upravoval, pretoÅ¾e rozhodnutie ohÂ¾adom pridelenÃ­ Å¡tÃ¡tov k regiÃ³nom padlo aÅ¾ v nasledovnÃ½ch fÃ¡zach projektu. V prvotnej verzii dÃ¡t to nebolo moÅ¾nÃ©, keÃ¯Å¾e medzi regiÃ³nmy a Å¡tÃ¡tmi nebol Å¾iadny vzÂah. O to sa postaral Michal pomocou XSLT.
         </para>
     </section>
     <section>
-        <title>Záver</title>
+        <title>ZÃ¡ver</title>
         <para>
-            Na záver sme sa všetci stretli, aby sme vychytali posledné nedostatky a spoloène sa pripravili na obhajobu projektu.
+            Na zÃ¡ver sme sa vÅ¡etci stretli, aby sme vychytali poslednÃ© nedostatky a spoloÃ¨ne sa pripravili na obhajobu projektu.
         </para>
     </section>
 </article>
